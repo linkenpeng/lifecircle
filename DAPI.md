@@ -91,27 +91,31 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 
 <h3>1.1、</h3><h3>获得周边小区接口</h3>  
 【参数】  
-keyword:	小区名称
-longitude:  小区经度
-latitude:   小区维度
-span:		经纬度范围【默认0.01】
+>
+
+	keyword:	小区名称
+	longitude:  小区经度
+	latitude:   小区维度
+	span:		经纬度范围【默认0.01】
 
 【调用方式】  
-网站域名/dapi/do.php?ac=xiaoqu&op=getlist&keyword=?  
+网站域名/dapi/do.php?ac=xiaoqu&op=getlist
 【返回值】  
 > 
 
-	xiaoquid: 小区id
+	xiaoquid: 	小区id
 	xiaoquname: 小区名字
-	uid: 小区发布人uid
-	username: 小区发布人用户名
-	introduce: 小区简介
-	pic_url: 小区图片
-	usernum: 小区用户数
+	uid: 		发布人uid
+	username: 	发布人用户名
+	name: 		发布人名字
+	avatar: 	发布人用户名
+	introduce:  小区简介
+	pic_url: 	小区图片
+	usernum: 	小区用户数
 	locationid: 地区id
-	longitude: 小区经度
-	latitude: 小区维度
-	citycode: 天气网城市代码
+	longitude:  小区经度
+	latitude: 	小区维度
+	citycode: 	天气网城市代码
 
  
   		
