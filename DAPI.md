@@ -117,9 +117,83 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	latitude: 	小区维度
 	citycode: 	天气网城市代码
 
- 
+1.2、<h3>广告接口</h3>  
+【参数】  
+>
+
+	xiaoquid:	小区id
+
+【调用方式】  
+网站域名/dapi/space.php?do=ad
+【返回值】  
+> 
+
+	adid: 			广告id
+	xiaoquid: 		广告id
+	title: 			广告标题
+	imageheight: 	图片高度
+	imagewidth: 	图片宽度
+	imagesrc: 		图片url地址
+	imageurl: 		广告链接到的地址
   		
+1.3、<h3>动态列表接口</h3>  
+【参数】  
+>
+
+	xiaoquid:	小区id【默认为空】
+	classid:	分类id【默认为空】
+	page:		当前页【默认1】
+	perpage:	每页数量【默认10】
+	uid:		用户uid【默认为登录用户的uid】
+	keyword		关键词搜索【默认为空】
+
+【调用方式】  
+网站域名/dapi/space.php?do=home
+【返回值】  
+> 
+
+	uid: 用户id
+	username: 用户名
+	name: 用户实名
+	avatar: 用户头像
+	titile: 动态标题
+	content: 动态内容
+	id: 帖子的id
+	idtype: 帖子的id类型,如：blogid/photoid/talkid
+	classid: 分类id
+	images: 动态图片数组
+	comment: 动态的评论
+	showgood: 动态赞的人
+	from: 发布来源，如：web/iphone/ipad/android/winphone	
+	location: 发布地址 
+	dateline: 动态产生的时间戳 
 	
+	以下参数暂时不知道用处
+	longitude: 发布经度
+	latitude: 0.0000000000
+	xiaoquid: 1	
+	icon: friend
+	friend: 0
+	target_ids: 
+	body_general: 
+	append_type: none
+	append_author: 
+	append_text: 
+	append_title: null,
+	append_link: null,
+	append_image: null,
+	forwardid: 0
+	replynum: 0
+	forwardnum: 0
+	goodnum: 0	
+	hot: 0
+	istop: 0	
+	tag: 
+	
+
+	
+
+		
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
 
