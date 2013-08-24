@@ -148,7 +148,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	keyword		关键词搜索【默认为空】
 
 【调用方式】  
-网站域名/dapi/space.php?do=home
+网站域名/dapi/space.php?do=home  
 【返回值】  
 > 
 
