@@ -168,7 +168,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	location: 发布地址 
 	dateline: 动态产生的时间戳 
 	
-	以下参数暂时不知道用处
+	以下参数暂时不知道用处 
 	longitude: 发布经度
 	latitude: 0.0000000000
 	xiaoquid: 1	
