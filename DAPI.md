@@ -89,7 +89,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 
 <h2>第一部分</h2> <h2>下行接口部分</h2>
 
-<h3>1.1、</h3><h3>获得周边小区接口</h3>  
+1.1、<h3>获得周边小区接口</h3>  
 【参数】  
 >
 
