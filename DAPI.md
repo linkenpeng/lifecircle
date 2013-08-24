@@ -140,6 +140,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 <h3>2.2、	</h3><h3>注册接口</h3>  
 【参数】  
 >  
+	
 	注册前调用 2.1、注册获取验证码接口
 	
 	username:		注册用户名(手机号)
