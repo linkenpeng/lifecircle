@@ -11,9 +11,9 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．3、	[动态列表接口](#动态列表接口)
 	* 1．4、	[吐槽详情接口](#吐槽详情接口)
 	* 1．5、	[获得分类接口](#获得分类接口)
-	* 1．6、	[圈子吐槽接口](#圈子吐槽接口)
+	* 1．6、	[圈子吐槽详情接口](#圈子吐槽详情接口)
 	* 1．7、	[圈子列表接口](#圈子列表接口)
-	* 1．8、	[圈子帖子列表接口](#圈子帖子列表接口)
+	* 1．8、	[圈子吐槽列表接口](#圈子吐槽列表接口)
 	* 1．9、	[评论列表接口](#评论列表接口)
 	* 1．10、[个人空间接口](#个人空间接口)
 	* 1．11、[对话列表接口](#对话列表接口)
@@ -168,7 +168,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	location: 发布地址 
 	dateline: 动态产生的时间戳 
 	
-	以下参数暂时不知道用处 
+	以下参数暂时不用管 
 	longitude: 发布经度
 	latitude: 0.0000000000
 	xiaoquid: 1	
@@ -190,9 +190,190 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	istop: 0	
 	tag: 
 	
+1.4、<h3>吐槽详情接口</h3>  
+【参数】  
+>
 
+	talkid:	 吐槽主键id
+
+【调用方式】  
+网站域名/dapi/space.php?do=talk  
+【返回值】  
+> 
+
+	talkid: 吐槽id【主键】
+	uid: 发表吐槽人uid
+	username: 吐槽人用户名
+	name: 吐槽人真实名字
+	avatar: 吐槽人头像
+	classid: 分类id
+	xiaoquid: 小区id	
+	title: 吐槽标题
+	message: 吐槽内容
+	from: 发布来源，如：iphone/android/ipad/web
+	tag: 标签	
+	images: 图片【数组】
+	location: 发布地址
+	dateline: 发布时间戳	
 	
+	以下参数暂时不用管
+	longitude: 0.0000000000
+	latitude: 0.0000000000
+	append_type: image
+	append_author: 
+	append_text: 
+	append_title: 
+	append_link: 
+	append_image: 
+	picids: 87,88,89
+	forwardid: 0
+	pre_forwardid: 0
+	ip: 192.168.1.138
+	replynum: 0
+	forwardnum: 0
+	goodnum: 0
+	friend: 0	
+	
+1.5、<h3>获得分类接口</h3>  
+【参数】  
+无
+【调用方式】  
+网站域名/dapi/space.php?do=taglist  
+【返回值】  
+> 
 
+	数组:  
+	tagid: 	 分类id
+	tagname: 分类名
+	
+1.6、<h3>圈子吐槽详情接口</h3>  
+【参数】  
+>
+
+	id:	 	圈子吐槽主键id
+
+【调用方式】  
+网站域名/dapi/space.php?do=mtalk  
+【返回值】  
+> 
+
+	mtalkid: 圈子吐槽主键id
+	uid: 吐槽人uid
+	username: 吐槽人用户名
+	name: 吐槽人真实名字
+	avatar: 吐槽人头像
+	tagid: 标签id
+	xiaoquid: 小区id
+	classid: 分类id		
+	title: 标题
+	message: 内容
+	images: 图片数组
+	show_good: 赞的人数组
+	commentlist: 评论数组
+	from: 发布来源
+	location: 发布地址
+	dateline: 发表的时间戳
+	
+	以下参数暂时不用管
+	append_type: none
+	append_author: 
+	append_text: 
+	append_title: 
+	append_image: 
+	pics: a:0:{}
+	forwardid: 0
+	pre_forwardid: 0
+	ip: 127.0.0.1
+	replynum: 0
+	forwardnum: 0
+	goodnum: 0	
+	longitude: 0.0000000000
+	latitude: 0.0000000000
+	
+1.7、<h3>圈子列表接口</h3>  
+【参数】  
+>
+
+	xiaoquid: 	小区id
+
+【调用方式】  
+网站域名/dapi/space.php?do=mtag  
+【返回值】  
+> 
+	数组：
+		tagid: 圈子id
+		tagname: 圈子名
+		membernum: 成员数
+		threadnum: 帖子数	
+		topimages: 图片数组
+		
+		以下参数暂时不用管
+		postnum: 0
+		uid: 1
+		username: admin
+		grade: 9	
+		fieldid: 1
+		xiaoquid: 1	
+		talknum: 2
+		close: 0
+		announcement: 没公告……不知道说啥
+		pic: 
+		closeapply: 0
+		joinperm: 0
+		viewperm: 0
+		threadperm: 0
+		postperm: 0
+		recommend: 0
+		moderator: 	
+		title: 其他	
+
+1.8、<h3>圈子吐槽列表接口</h3>  
+【参数】  
+>
+
+	tagid: 	 圈子id 
+	page:	 当前页【默认1】
+	perpage: 每页数量【默认10】
+
+【调用方式】  
+网站域名/dapi/space.php?do=mtalk&op=talklist  
+【返回值】  
+> 
+	数组：
+		mtalkid: 圈子吐槽主键id
+		uid: 吐槽人uid
+		username: 吐槽人用户名
+		name: 吐槽人真实名字
+		avatar: 吐槽人头像	
+		title: 标题
+		message: 内容
+		images: 图片数组,
+		show_good: 赞的人数组,
+		commentlist: 评论数组
+		from: 发布来源
+		location: 发布地址
+		dateline: 发表的时间戳
+		
+		以下参数暂时不用管
+		classid: 0
+		tagid: 1
+		xiaoquid: 1		
+		append_type: none
+		append_author: 
+		append_text: 
+		append_title: 
+		append_image: 
+		pics: a:0:{}
+		forwardid: 0
+		pre_forwardid: 0
+		ip: 127.0.0.1
+		replynum: 0
+		forwardnum: 0
+		goodnum: 0		
+		longitude: 0.0000000000
+		latitude: 0.0000000000
+		
+		
 		
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
