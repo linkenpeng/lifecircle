@@ -347,8 +347,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		avatar: 吐槽人头像	
 		title: 标题
 		message: 内容
-		images: 图片数组,
-		show_good: 赞的人数组,
+		images: 图片数组
+		show_good: 赞的人数组
 		commentlist: 评论数组
 		from: 发布来源
 		location: 发布地址
@@ -373,8 +373,191 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		longitude: 0.0000000000
 		latitude: 0.0000000000
 		
-		
-		
+<h3>1．9、	</h3><h3>评论列表接口</h3>  
+【参数】  
+>  
+
+	id:			被评论的对象id
+	idtype:		被评论的类型(photoid: 照片, 'blogid'：日志)
+	page:		当前页，默认1
+	perpage:	每页数量，默认10
+	starttime:	取数据的开始时间，不包含变量自身, 默认空值不设置数据范围 
+	endtime:	取数据的结束时间，不包含变量自身, 默认空值不设置数据范围
+
+【调用方式】  
+网站域名/dapi/space.php?do=comment
+【返回值】  
+>  
+
+	cid:			评论主键id
+	authorid:		评论用户uid
+	avatar:			头像url
+	authorname:		评论用户名
+	message:		评论内容
+	dateline:		评论时间
+	candel:			是否有删除权限，1：有 0：无		
+
+<h3>1．10、	</h3><h3>个人空间接口</h3>  
+【参数】  
+>  
+
+	uid:			空间主人的uid【为空则是登录人的uid】
+
+【调用方式】  
+网站域名/dapi/space.php?do=comment
+【返回值】  
+>  
+
+	uid: 用户id
+	username: 用户名
+	nickname: 昵称
+	name: 真实名字
+	mobile: 手机号
+	idcard: 身份证
+	verifystatus: 认证状态：0 未认证；1等待审核；2通过审核	
+	avatar: 头像
+	friendnum: 好友数
+	talknum: 吐槽数
+	
+	以下参数暂时不用管
+	namestatus: 1
+	sex: 男
+	email: 
+	newemail: 
+	emailcheck: 0
+	mobile2: 18028056032
+	qq: 153008910
+	msn: 
+	msnrobot: 
+	msncstatus: 0
+	videopic: 
+	birthyear: 1986
+	birthmonth: 11
+	birthday: 11
+	blood: O
+	marry: 非单身
+	birthprovince: 广东
+	birthcity: 广东江门
+	resideprovince: 广东
+	residecity: 广东广州
+	note: 
+	spacenote: 
+	authstr: 
+	theme: t12
+	nocss: 0
+	menunum: 0
+	css: 
+	privacy: {
+		view: {
+			index: 0
+			profile: 0
+			friend: 0
+			wall: 0
+			feed: 0
+			mtag: 0
+			event: 0
+			doing: 0
+			blog: 0
+			album: 0
+			share: 0
+			poll: 0
+		},
+		feed: {
+			doing: 1,
+			blog: 1,
+			upload: 1,
+			share: 1,
+			poll: 1,
+			joinpoll: 1,
+			thread: 1,
+			post: 1,
+			mtag: 1,
+			event: 1,
+			join: 1,
+			friend: 1,
+			comment: 1,
+			show: 1,
+			spaceopen: 1,
+			credit: 1,
+			invite: 1,
+			task: 1,
+			profile: 1,
+			album: 1,
+			click: 1
+		}
+	},
+	friend: 2,6
+	feedfriend: 2,6
+	sendmail: 
+	magicstar: 0
+	magicexpire: 0
+	timeoffset: 
+	xiaoquid: 1
+	groupid: 1
+	credit: 765
+	experience: 879	
+	roomid: 36	
+	videostatus: 0
+	neighbor_verify_num: 0
+	domain: 	
+	viewnum: 18
+	notenum: 1
+	addfriendnum: 1
+	mtaginvitenum: 0
+	eventinvitenum: 0
+	myinvitenum: 0
+	pokenum: 0
+	doingnum: 0	
+	blognum: 1
+	albumnum: 1
+	threadnum: 1
+	pollnum: 1
+	eventnum: 0
+	sharenum: 2
+	dateline: 1369763493
+	updatetime: 1377527332
+	lastsearch: 0
+	lastpost: 1377527332
+	lastlogin: 1377526289
+	lastsend: 0
+	attachsize: 6654532
+	addsize: 0
+	addfriend: 0
+	flag: 1
+	newpm: 0	
+	regip: 127.0.0.1
+	ip: 127000000
+	mood: 18
+	myapp: 1,2,3,4
+	self: 1,
+	xiaoqu: {
+		xiaoquid: 1
+		xiaoquname: 华南御景园
+		uid: 1
+		username: admin
+		introduce: 这里环境优美啊，空气好啊……就是路太烂。
+		pic_url: http://shq-pic.b0.upaiyun.com/201307/2/1_1372733067xKkX.jpg
+		usernum: 0
+		locationid: 5
+		longitude: 113.3787200000
+		latitude: 23.1710100000
+		citycode: 101280101
+	},
+	friends: [
+		2
+		6
+	],
+	allnotenum: 2,
+	isfriend: 1,
+	sex_org: 1
+	birth: 1986年11月11日
+	star: <img src=\image/star_level2.gif\ align=\absmiddle\ />
+	domainurl: http://my.life.com/dapi/?1
+	magiccredit: 0,
+	userapp: []
+	
+
+	
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
 
