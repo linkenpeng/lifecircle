@@ -555,8 +555,112 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	domainurl: http://my.life.com/dapi/?1
 	magiccredit: 0,
 	userapp: []
-	
 
+<h3>1．11、	</h3><h3>对话列表接口</h3>  
+【参数】  
+>  
+
+	page		当前页【默认1】
+	perpage		每页数量【默认10】
+
+【调用方式】  
+网站域名/dapi/space.php?do=pm
+【返回值】  
+>  
+
+	plid: 对话主键id
+	authorid: 发起人uid
+	authorname: 发起人名字
+	authorvavatar: 发起人头像
+	subject: 发起时主题
+	founddateline: 发起时间戳
+	lastsummary: 最后回复时间
+	lastauthorid: 最后回复人uid
+	lastauthorname: 最后回复人名字
+	lastdateline: 最后回复时间
+	msgtoid: 对话对方的uid
+	isnew: 是否是新的对话，1：是 0：不是
+	pmnum: 对话详情内容数量
+	touid: 对话对方的uid	
+	
+	以下参数暂时不用管
+	uid: 1		
+	lastupdate: 1377609063	
+	pmtype: 1	
+	members: 2
+	dateline: 1377609063
+	lastmessage: a:3:{s:12:\lastauthorid\;s:1:\1\;s:10:\lastauthor\;s:5:\admin\;s:11:\lastsummary\;s:7:\回复1\;}
+	pmid: 3	
+	lastauthor: admin	
+	msgfromid: 1
+	msgfrom: admin
+	message: 回复1
+	new: 0	
+	daterange: 1,
+	tousername: linken
+
+<h3>1．12、	</h3><h3>对话详情接口</h3>  
+【参数】  
+>  
+
+	plid 	对话列表中的主键id
+	touid	对话列表中的touid
+
+【调用方式】  
+网站域名/dapi/space.php?do=pm&subop=view
+【返回值】  
+>  
+	
+	plid: 3	
+	msgfromid: 发信人uid
+	msgfrom: 发信人用户名
+	msgfromname: 发信人名称
+	msgfromavatar: 发信人头像	
+	message: 信息内容
+	msgtoid: 收信息人uid	
+	msgtoname: 收信息人名字
+	msgtoavatar: 收信息人的头像
+	dateline: 信息生成时间戳
+	
+	以下参数暂时不用管
+	authorid: 6
+	author: linken
+	pmtype: 1
+	subject: 对话1
+	members: 2	
+	pmid: 5	
+	founderuid: 6
+	founddateline: 1377609043
+	touid: 1
+	
+<h3>1．13、	</h3><h3>对话详情接口</h3>  
+【参数】  
+>  
+
+	plid 	对话列表中的主键id
+	touid	对话列表中的touid
+
+【调用方式】  
+网站域名/dapi/space.php?do=pm&subop=view
+【返回值】  
+>  
+	
+	id: 通知主键id	
+	new: 是否是新的通知 1：是 0：不是
+	authorid: 产生通知人的uid
+	author: 产生通知人的用户名
+	authorname: 产生通知人的名字
+	authoravatar: 产生通知人的头像
+	isfriend: 产生通知的人是否是自己的好友 1 ：是		
+	note: 评论内容
+	dateline: 通知时间戳
+	idtype: 帖子的类型，如：blogid
+	sid: 帖子的id
+
+	以下参数暂时不用管
+	uid: 接收通知人的uid
+	type: 通知类型
+	
 	
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
