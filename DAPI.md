@@ -301,6 +301,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 网站域名/dapi/space.php?do=mtag  
 【返回值】  
 > 
+	
 	数组：
 		tagid: 圈子id
 		tagname: 圈子名
@@ -340,6 +341,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 网站域名/dapi/space.php?do=mtalk&op=talklist  
 【返回值】  
 > 
+	
 	数组：
 		mtalkid: 圈子吐槽主键id
 		uid: 吐槽人uid
@@ -405,7 +407,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	uid:			空间主人的uid【为空则是登录人的uid】
 
 【调用方式】  
-网站域名/dapi/space.php?do=comment
+网站域名/dapi/space.php
 【返回值】  
 >  
 
@@ -634,15 +636,15 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	founddateline: 1377609043
 	touid: 1
 	
-<h3>1．13、	</h3><h3>对话详情接口</h3>  
+<h3>1．13、	</h3><h3>通知列表接口</h3>  
 【参数】  
 >  
 
-	plid 	对话列表中的主键id
-	touid	对话列表中的touid
+	page 	当前页【默认1】
+	perpage	每页数量【默认10】
 
 【调用方式】  
-网站域名/dapi/space.php?do=pm&subop=view
+网站域名/dapi/space.php?do=notice
 【返回值】  
 >  
 	
