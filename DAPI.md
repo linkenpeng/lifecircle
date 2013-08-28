@@ -388,7 +388,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	endtime:	取数据的结束时间，不包含变量自身, 默认空值不设置数据范围
 
 【调用方式】  
-网站域名/dapi/space.php?do=comment
+网站域名/dapi/space.php?do=comment  
 【返回值】  
 >  
 
@@ -407,7 +407,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	uid:			空间主人的uid【为空则是登录人的uid】
 
 【调用方式】  
-网站域名/dapi/space.php
+网站域名/dapi/space.php  
 【返回值】  
 >  
 
@@ -567,7 +567,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	perpage		每页数量【默认10】
 
 【调用方式】  
-网站域名/dapi/space.php?do=pm
+网站域名/dapi/space.php?do=pm  
 【返回值】  
 >  
 
@@ -610,7 +610,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	touid	对话列表中的touid
 
 【调用方式】  
-网站域名/dapi/space.php?do=pm&subop=view
+网站域名/dapi/space.php?do=pm&subop=view  
 【返回值】  
 >  
 	
@@ -644,7 +644,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	perpage	每页数量【默认10】
 
 【调用方式】  
-网站域名/dapi/space.php?do=notice
+网站域名/dapi/space.php?do=notice  
 【返回值】  
 >  
 	
@@ -671,7 +671,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	无
 
 【调用方式】  
-网站域名/dapi/cp.php?ac=profile
+网站域名/dapi/cp.php?ac=profile  
 【返回值】  
 >  
 	
@@ -696,7 +696,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	perpage: 每页数量【默认10】
 
 【调用方式】  
-网站域名/dapi/space.php?do=friend
+网站域名/dapi/space.php?do=friend  
 【返回值】  
 >  
 	
@@ -713,7 +713,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	无
 
 【调用方式】  
-网站域名/dapi/space.php?do=friend&view=groupname
+网站域名/dapi/space.php?do=friend&view=groupname  
 【返回值】  
 >  
 	
@@ -728,7 +728,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	无
 
 【调用方式】  
-网站域名/dapi/cp.php?ac=friend&op=request
+网站域名/dapi/cp.php?ac=friend&op=request  
 【返回值】  
 >  
 	
