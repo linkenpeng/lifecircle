@@ -21,7 +21,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．13、[通知列表接口](#通知列表接口)
 	* 1．14、[个人设置读取接口](#个人设置读取接口)
 	* 1．15、[好友列表接口](#好友列表接口)
-	* 1．16、[好友添加申请列表接口](#好友添加申请列表接口)
+	* 1．16、[好友分组接口](#好友分组接口)
+	* 1．17、[好友添加申请列表接口](#好友添加申请列表接口)
 	
 	
 * 第二部分 [上行接口部分](#上行接口部分)
@@ -47,12 +48,12 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	3)	在上行接口中，包含有部分下行接口，用来生成发布界面。  
 	4)  所有接口中，需要发送一个【m_auth】【登录时获得】的参数，进行认证，除非是特别强调不需要登录验证的接口。
 	5)	如果服务器返回：
-		"data": {
-			"return": "-1",
+		data: {
+			return: -1
 		},
-		"msgkey": "auth_failure",
-		"msg": "auth_failure",
-		"error": 1
+		msgkey: auth_failure
+		msg: auth_failure
+		error: 1
 		则代表m_auth不对或者已经失效，需要重新登录更新m_auth。  
 
 所有的接口服务器均以Json格式返回数据，在每个返回的信息中，分别是：   
@@ -69,16 +70,16 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 
 	{
 
-		"data": {
-			"adid": "2",
-			"title": "手机广告",
-			"imagesrc": "http://www.baidu.com/img/baidu_sylogo1.gif",
-			"idtype": "blog",
-			"id": "1"
+		data: {
+			adid: 2
+			title: 手机广告
+			imagesrc: http://www.baidu.com/img/baidu_sylogo1.gif
+			idtype: blog
+			id: 1
 		},
-		"msgkey": "rest_success",
-		"msg": "数据获取成功",
-		"error": 0
+		msgkey: rest_success
+		msg: 数据获取成功
+		error: 0
 	}
 
 
@@ -661,6 +662,136 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	uid: 接收通知人的uid
 	type: 通知类型
 	
+<h3>1．14、	</h3><h3>个人设置读取接口</h3>  
+【参数】  
+>  
+
+	无
+
+【调用方式】  
+网站域名/dapi/cp.php?ac=profile
+【返回值】  
+>  
+	
+	uid: 用户uid
+	username: 用户名
+	name: 用户实名
+	avatar: 用户头像
+	mobile: 手机号
+	verifystatus: 认证状态：0 未认证；1等待审核；2通过审核
+	xiaoquname: 小区名
+	qiname: 期
+	dongname: 栋
+	cengname: 层
+	roomname: 室
+	
+<h3>1．15、	</h3><h3>好友列表接口</h3>  
+【参数】  
+>  
+
+	group:   分组id
+	page:	 当前页【默认1】
+	perpage: 每页数量【默认10】
+
+【调用方式】  
+网站域名/dapi/space.php?do=friend
+【返回值】  
+>  
+	
+	uid:      用户uid
+	username: 用户名
+	name:     用户实名
+	avatar:   用户头像
+	note:     好友备注
+	
+<h3>1．16、	</h3><h3>好友分组接口</h3>  
+【参数】  
+>  
+
+	无
+
+【调用方式】  
+网站域名/dapi/space.php?do=friend&view=groupname
+【返回值】  
+>  
+	
+	数组
+		gid: 分组id
+		gname: 分组名称
+		
+<h3>1．17、	</h3><h3>好友添加申请列表接口</h3>  
+【参数】  
+>  
+
+	无
+
+【调用方式】  
+网站域名/dapi/cp.php?ac=friend&op=request
+【返回值】  
+>  
+	
+	uid: 用户uid
+	username: 用户名
+	avatar: 用户头像
+	name: 用户实名
+	verifystatus: 认证状态：0 未认证；1等待审核；2通过审核
+	dateline: 申请时间戳
+	
+	以下参数暂时不用管
+	mobile: 手机号	
+	xiaoquid: 用户所在小区id
+	groupid: 用户分组id	
+	credit: 105
+	experience: 95
+	nickname: 测试用户	
+	idcard: 111111111111111111
+	roomid: 21	
+	namestatus: 1
+	videostatus: 0
+	neighbor_verify_num: 0
+	domain: 
+	friendnum: 0
+	viewnum: 1
+	notenum: 2
+	addfriendnum: 0
+	mtaginvitenum: 0
+	eventinvitenum: 0
+	myinvitenum: 0
+	pokenum: 0
+	doingnum: 0
+	talknum: 0
+	blognum: 0
+	albumnum: 0
+	threadnum: 0
+	pollnum: 0
+	eventnum: 0
+	sharenum: 0	
+	updatetime: 1374045850
+	lastsearch: 0
+	lastpost: 1377098373
+	lastlogin: 1377312996
+	lastsend: 0
+	attachsize: 0
+	addsize: 0
+	addfriend: 0
+	flag: 0
+	newpm: 0	
+	regip: 127.0.0.1
+	ip: 127000000
+	mood: 0
+	myapp: null,
+	friend: 
+	fuid: 1
+	fusername: admin
+	status: 0
+	gid: 5
+	note: 
+	num: 0
+	cfriend: 
+	cfcount: 0
+	
+	
+
 	
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
