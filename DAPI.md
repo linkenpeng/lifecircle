@@ -803,8 +803,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 >  
 
 	username:			用户名（手机号）
-【调用方式】  
-网站域名/dapi/do.php?ac=register&op=getseccode&username=? 
+【调用方式】【GET方式】  
+网站域名/dapi/do.php?ac=register&op=getseccode   
 【返回值】  
 >  
 
