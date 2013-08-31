@@ -862,15 +862,6 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	password:		密码
 	iscookie:		是否保存密码，为1时保存 
 	
-	如果需要绑定新浪微博，需要提供以下参数【可选】： 
-	sina_uid			新浪微博用户id
-	sina_token			新浪微博token
-	sina_expires_in		新浪微博token过期时间(格式：2013-05-12 22:59:59)
-	
-	如果需要绑定腾讯微博，需要提供以下参数【可选】： 
-	qq_openid		腾讯微博用户id
-	qq_token		腾讯微博token
-	
 【调用方式】  
 网站域名/dapi/do.php?ac=login  
 【返回值】  
@@ -881,14 +872,13 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 			-1： 用户名或者密码为空
 			-2： 用户名或者密码错误
 			 1： 登录成功
-	 m_auth:   登录成功后返回的登录密匙，请求每个接口都需要发送这个参数给服务器,重新登录时，这个值会改变。
-	 uid:	   用户的uid  
-	 username: 用户名  
-	 name:     用户昵称  
-	 avatar:   用户头像  
-	 vipstatus:	personal: 个人, family： 家庭， 空值：普通用户
-	 credit：  本次登录的积分
-	 experience 本次登录的经验
+	 m_auth:      登录成功后返回的登录密匙，请求每个接口都需要发送这个参数给服务器,重新登录时，这个值会改变。
+	 uid:	      用户的uid  
+	 username: 	  用户名  
+	 name:     	  用户昵称  
+	 avatar:      用户头像  
+	 credit：     本次登录的积分
+	 experience   本次登录的经验
 	 is_sina_bind 是否绑定新浪微博 1 是 0 否
 	 is_qq_bind   是否绑定腾讯微博 1 是 0 否
 	 
@@ -896,15 +886,21 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 【参数】  
 >  
 	
-	token:			[这个参数已经没用了,可传可不传]
-	
-	logintype:		weibo: 新浪微博, qq：腾讯微博  
+	以下参数二选一：
 	新浪微博登录
-	sina_uid		微博的uid 
-	腾讯微博登陆
-	qq_openid		腾讯微博的id  
+	logintype:			weibo	
+	name:				新浪微博昵称 
+	sina_uid			新浪微博的uid 	
+	sina_token			新浪微博token  
+	sina_expires_in		新浪微博token过期时间(格式：2013-05-12 22:59:59) 
 	
-	参数的组合方式：(weibo + sina_uid) 或者 (qq + qq_openid)  
+	腾讯微博登陆 
+	logintype:			qq  		
+	name:				腾讯微博的昵称 
+	qq_openid			腾讯微博的id  
+	qq_token			腾讯微博token 
+	
+	如果用户未绑定，后台会自动用参数进行注册并登录。已经绑定的，直接登录。
 	
 【调用方式】  
 网站域名/dapi/do.php?ac=login  
@@ -916,14 +912,13 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 			-1：token的uid参数为空
 			-2：token的uid未绑定
 			 1：登录成功
-		m_auth: 登录成功后返回的登录密匙，请求每个接口都需要发送这个参数给服务器,重新登录时，这个值会改变  
-		uid:	   用户的uid  
-		username: 用户名  
-		name:     用户昵称  
-		avatar:   用户头像  
-		vipstatus:	personal: 个人, family： 家庭， 空值：普通用户
-		credit：  本次登录的积分
-		experience 本次登录的经验
+		m_auth:      登录成功后返回的登录密匙，请求每个接口都需要发送这个参数给服务器,重新登录时，这个值会改变  
+		uid:	     用户的uid  
+		username:    用户名  
+		name:        用户昵称  
+		avatar:      用户头像  
+		credit：     本次登录的积分
+		experience   本次登录的经验
 		is_sina_bind 是否绑定新浪微博 1 是 0 否  
 		is_qq_bind   是否绑定腾讯微博 1 是 0 否  
 
