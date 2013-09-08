@@ -23,6 +23,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．15、[好友列表接口](#好友列表接口)
 	* 1．16、[好友分组接口](#好友分组接口)
 	* 1．17、[好友添加申请列表接口](#好友添加申请列表接口)
+	* 1．18、[赞列表接口](#赞列表接口)
 	
 	
 * 第二部分 [上行接口部分](#上行接口部分)
@@ -31,7 +32,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.3、 [普通登录接口](#普通登录接口)
 	* 2.4、	[第三方登录接口](#第三方登录接口)
 	* 2.5、	[找回密码接口](#找回密码接口)
-	* 2.6、	[退出登录接口](#退出登录接口)
+	* 2.6、	[退出登录接口](#退出登录接口) 
+	* 2.7、	[赞接口](#赞接口)
 	
 	
  
@@ -792,7 +794,26 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	cfriend: 
 	cfcount: 0
 	
+<h3>1．18、	</h3><h3>赞列表接口</h3>  
+【参数】  
+>  
+
+	id:			被赞的id
+	idtype:		被赞的idtype
+	page:		当前页
+	perpage:	每页数量
+
+【调用方式】  
+网站域名/dapi/do.php?ac=showgood&op=toplist   
+【返回值】  
+>  
 	
+	data【数组】
+		uid: 		  用户uid
+		username: 	  用户名
+		name:         用户实名
+		verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
+		avatar: 	  用户头像 
 
 	
 <h2>第二部分 </h2><h2>上行接口部分</h2>
@@ -965,8 +986,25 @@ m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用�
 
 		data
 			return:  1  
-	
-	
+			
+<h3>2.7、</h3><h3>赞接口</h3>  
+【参数】【GET方式】
+>  
+
+	id:			被赞的id
+	idtype: 	被赞的idtype
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+【调用方式】  
+网站域名/dapi/do.php?ac=showgood&op=make    
+【返回值】  
+>   
+
+		data
+			result:  1 已赞 -1 取消赞  
+		
+		msgkey：		信息提示码
+		msg：			返回的提示信息
+		error:			返回的错误的状态, 0无错误，1出错
 	
 	
 	
