@@ -132,6 +132,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	adid: 			广告id
 	xiaoquid: 		广告id
 	title: 			广告标题
+	pagetype:		页面位置
 	imageheight: 	图片高度
 	imagewidth: 	图片宽度
 	imagesrc: 		图片url地址
@@ -168,22 +169,21 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	from: 发布来源，如：web/iphone/ipad/android/winphone	
 	location: 发布地址 
 	dateline: 动态产生的时间戳 
+	xiaoquid: 小区id
 	
 	以下参数暂时不用管 
 	longitude: 发布经度
-	latitude: 0.0000000000
-	xiaoquid: 1	
+	latitude: 0.0000000000	
 	icon: friend
 	friend: 0
 	target_ids: 
 	body_general: 
-	append_type: none
-	append_author: 
+	append_idtype: 
+	append_id: 0
 	append_text: 
-	append_title: null,
-	append_link: null,
-	append_image: null,
-	forwardid: 0
+	append_title: 
+	append_link: 
+	append_image: 
 	replynum: 0
 	forwardnum: 0
 	goodnum: 0	
@@ -220,15 +220,13 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	以下参数暂时不用管
 	longitude: 0.0000000000
 	latitude: 0.0000000000
-	append_type: image
-	append_author: 
+	append_idtype: 
+	append_id: 0
 	append_text: 
 	append_title: 
 	append_link: 
 	append_image: 
 	picids: 87,88,89
-	forwardid: 0
-	pre_forwardid: 0
 	ip: 192.168.1.138
 	replynum: 0
 	forwardnum: 0
@@ -305,19 +303,19 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	数组：
 		tagid: 圈子id
 		tagname: 圈子名
-		membernum: 成员数
-		threadnum: 帖子数	
+		membernum: 成员数		
+		talknum: 圈子吐槽数
 		topimages: 图片数组
+		close: 圈子开启状态：0 开启 1 关闭
+		grade: 允许参与的用户组	
 		
 		以下参数暂时不用管
 		postnum: 0
 		uid: 1
-		username: admin
-		grade: 9	
+		username: admin		
 		fieldid: 1
 		xiaoquid: 1	
-		talknum: 2
-		close: 0
+		threadnum: 帖子数			
 		announcement: 没公告……不知道说啥
 		pic: 
 		closeapply: 0
@@ -336,6 +334,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	tagid: 	 圈子id 
 	page:	 当前页【默认1】
 	perpage: 每页数量【默认10】
+	keyword: 搜索关键词【默认为空】
 
 【调用方式】  
 网站域名/dapi/space.php?do=mtalk&op=talklist  
@@ -356,19 +355,19 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		from: 发布来源
 		location: 发布地址
 		dateline: 发表的时间戳
+		tagid: 圈子id
+		xiaoquid: 小区id	
 		
 		以下参数暂时不用管
-		classid: 0
-		tagid: 1
-		xiaoquid: 1		
-		append_type: none
-		append_author: 
+		classid: 0		
+		append_idtype: 
+		append_id: 0
+		append_uid: 0
 		append_text: 
 		append_title: 
 		append_image: 
+		append_link: 
 		pics: a:0:{}
-		forwardid: 0
-		pre_forwardid: 0
 		ip: 127.0.0.1
 		replynum: 0
 		forwardnum: 0
@@ -421,6 +420,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	avatar: 头像
 	friendnum: 好友数
 	talknum: 吐槽数
+	verify_type: 认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	
 	以下参数暂时不用管
 	namestatus: 1
@@ -816,12 +816,13 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 【参数】  
 >  
 	
-	注册前调用 2.1、注册获取验证码接口
+	注册前调用 2.1、注册获取验证码接口	
 	
 	username:		注册用户名(手机号)
 	name:			用户昵称
 	password:		密码
 	seccode:		手机验证码  
+	xiaoquid:		调用 1.1、获得周边小区接口 供用户选择xiaoquid
 	
 	如果需要绑定新浪微博，需要提供以下参数【可选】： 
 	sina_uid			新浪微博用户id
@@ -849,7 +850,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 					username:  用户名  
 					name:      用户昵称  
 					avatar:    用户头像  
-					vipstatus:   personal: 个人, family： 家庭， 空值：普通用户
+					verify_type:   0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 					is_sina_bind 是否绑定新浪微博 1 是 0 否  
 					is_qq_bind   是否绑定腾讯微博 1 是 0 否  
 					
@@ -881,6 +882,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	 experience   本次登录的经验
 	 is_sina_bind 是否绑定新浪微博 1 是 0 否
 	 is_qq_bind   是否绑定腾讯微博 1 是 0 否
+	 verify_type:   0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
+	 xiaoquid:		小区id
 	 
 <h3>2.4、	</h3><h3>第三方登录接口</h3>  
 【参数】  
