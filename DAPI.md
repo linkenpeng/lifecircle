@@ -129,6 +129,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 >
 
 	xiaoquid:	小区id
+	pagetype:	页面位置
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
