@@ -400,7 +400,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 >  
 
 	id:			被评论的对象id
-	idtype:		被评论的类型(photoid: 照片, 'blogid'：日志)
+	idtype:		被评论的类型(talkid: 吐槽, 'blogid'：日志)
 	page:		当前页，默认1
 	perpage:	每页数量，默认10
 	starttime:	取数据的开始时间，不包含变量自身, 默认空值不设置数据范围 
