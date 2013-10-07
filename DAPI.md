@@ -39,7 +39,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.10、	[申请成为好友接口](#申请成为好友接口)  
 	* 2.11、	[同意成为好友接口](#同意成为好友接口)  
 	* 2.12、	[发私信接口](#发私信接口)  
-	* 2.13、	[发表吐槽接口](#发表吐槽接口)  
+	* 2.13、	[发表/转发吐槽接口](#发表/转发吐槽接口)  
 	* 2.14、	[上传照片接口](#上传照片接口)  
 	
  
@@ -1145,7 +1145,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	error:				返回的错误的状态, 0无错误，1出错
 	
 	
-<h3>2.13、	</h3><h3>发表吐槽接口</h3>  
+<h3>2.13、	</h3><h3>发表/转发吐槽接口</h3>  
 【参数】  
 >  
 	
@@ -1157,6 +1157,12 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	location	发布地址
 	from		发布来源 如：iphone/ipad/android
 	picids		图片ids, 多个用|连接, 调用 <2.14 上传照片接口> 得到
+	
+	转发时需要提供：
+	message			转发时填的内容
+	forward_id		原吐槽id
+	forward_idtype	吐槽的idtype，值为：talkid
+	
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 【调用方式】  
 网站域名/dapi/cp.php?ac=talk&op=addtalk   
@@ -1166,7 +1172,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	msgkey：			信息提示码
 	msg：				返回的提示信息
 	error:				返回的错误的状态, 0无错误，1出错	
-	
+
+
 <h3>2.14、	</h3><h3>上传照片接口</h3>  
 【参数】  
 >  
