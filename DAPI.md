@@ -1113,14 +1113,19 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 【参数】  
 >  
 
-	applyuid:		对方的uid
+	applyuid:		对方的uid；批量申请时，多个uid用|连接，如：1|2|3 
 	gid:			申请的分组
 	note:			申请时的附带信息
 	addsubmit：		提交申请表单用的验证，设为1即可  
 	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 	
 【调用方式】  
+申请成为好友接口：
 网站域名/dapi/dapi/cp.php?ac=friend&op=add  
+
+批量申请成为好友接口：
+网站域名/dapi/dapi/cp.php?ac=friendmul&op=add  
+
 【返回值】  
 >  
 	
@@ -1232,7 +1237,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 【参数】  
 >  
 	
-	tagid		圈子id
+	tagid		圈子id, 批量加入用 | 连接, 如：1|2|3
 	joinsubmit 	1
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 	
