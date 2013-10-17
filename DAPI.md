@@ -44,6 +44,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.14、	[上传照片接口](#上传照片接口)  
 	* 2.15、	[设置吐槽分类接口](#设置吐槽分类接口)  
 	* 2.16、	[申请加入圈子接口](#申请加入圈子接口)  	
+	* 2.17、	[发表评论接口](#发表评论接口)  	
 	
  
 <h2>前言</h2>  
@@ -1250,5 +1251,23 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错	
 	
+<h3>2.17、	</h3><h3>发表评论接口</h3>  
+【参数】  
+>  
+	
+	id				被评论的帖子id
+	idtype			被评论的帖子类型, (talkid, blogid等)
+	message			评论内容
+	commentsubmit 	1
+	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+	
+【调用方式】  
+网站域名/dapi/cp.php?ac=comment         
+【返回值】  
+>  
+	
+	msgkey：			信息提示码  
+	msg：				返回的提示信息  
+	error:				返回的错误的状态, 0无错误，1出错		
 	
 	
