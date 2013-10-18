@@ -716,16 +716,28 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	
 	uid: 			用户uid
 	username: 		用户名
-	name: 			用户实名
+	name: 			用户昵称
+	realname		真实姓名
 	avatar: 		用户头像
 	verify_type:	认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	mobile: 		手机号
-	verifystatus: 	认证状态：0 未认证；1等待审核；2通过审核
+	verifystatus: 	认证状态：0 未认证；1等待审核；2通过审核	
+	sex			 	性别
+	marry			婚姻状态
+	qq 				qq
+	birthcity 		出生地
+	birth 			生日
+	roomid			房屋id
 	xiaoquname: 	小区名
 	qiname: 		期
 	dongname: 		栋
 	cengname: 		层
 	roomname: 		室
+	privacy：隐私【数组】
+			birthcity	0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			birth		0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			qq			0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			marry		0：全用户可见 1: 仅好友可见 3: 仅自己可见
 	
 <h3>1．15、	</h3><h3>好友列表接口</h3>  
 【参数】  
