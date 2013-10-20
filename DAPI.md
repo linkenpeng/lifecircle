@@ -25,6 +25,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．17、[好友添加申请列表接口](#好友添加申请列表接口)
 	* 1．18、[赞列表接口](#赞列表接口)
 	* 1．19、[推荐好友接口](#推荐好友接口) 
+	* 1．20、[获取小区物业分布信息（期、栋、层、房号）接口](#获取小区物业分布信息（期、栋、层、房号）接口) 
 	
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
@@ -874,7 +875,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 		avatar: 	  用户头像 
 
-<h3>1．18、	</h3><h3>推荐好友接口</h3>  
+<h3>1．19、	</h3><h3>推荐好友接口</h3>  
 【参数】  
 >  
 
@@ -893,6 +894,37 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务  
 		avatar: 	  用户头像  
 
+<h3>1．20、	</h3><h3>获取小区物业分布信息（期、栋、层、房号）接口</h3>  
+【参数】  
+>  
+
+	xiaoquid:	小区的id
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/do.php?ac=xiaoqustru  
+【返回值】  
+>  
+	
+	data【数组】
+		qilist:
+			qiid		期id			
+			qiname		期数名称
+			xiaoquid	所属小区
+		donglist:
+			dongid		栋id
+			dongname	栋名称
+			qiid		所属期数
+		cenglist:
+			cengid		层id
+			cengname	层名称
+			dongid		所属栋
+		roomlist:
+			roomid		房间id
+			roomname	房间名称			
+			cengid		所属层
+
+		
 		
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
