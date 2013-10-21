@@ -1371,13 +1371,11 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	sex					性别 1 男 2 女	
 	birthprovince		出生省份
 	birthcity			出生城市
-	qq					qq	
 	
 	隐私保护: 	
 	friend[birth]		生日隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	friend[marry]		婚恋状态隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	friend[birthcity]	出生地隐私 0:全用户可见 1:仅好友可见 3:仅自己可见		
-	friend[qq]			qq隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
