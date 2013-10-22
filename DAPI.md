@@ -1367,7 +1367,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	birthyear			出生年
 	birthmonth			出生月
 	birthday			出生日	
-	marry				婚恋状态 1 未婚 2 已婚 	
+	marry				婚恋状态 0：未设置 1：单身 2：已婚 3：恋爱 	
 	sex					性别 1 男 2 女	
 	birthprovince		出生省份
 	birthcity			出生城市
