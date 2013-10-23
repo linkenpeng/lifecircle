@@ -49,8 +49,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.18、	[发表圈子吐槽接口](#发表圈子吐槽接口)  	
 	* 2.19、	[发表评论接口](#发表评论接口)  	
 	* 2.20、	[个人基本设置保存接口](#个人基本设置保存接口)  	
-	* 2.21、	[个人联系方式设置保存接口](#个人联系方式设置保存接口)  	
-	* 2.22、	[个人认证信息保存接口](#个人认证信息保存接口)  		
+	* 2.21、	[个人认证信息保存接口](#个人认证信息保存接口)  		
 	
  
 <h2>前言</h2>  
@@ -731,7 +730,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	sex			 	性别
 	marry			婚姻状态
 	qq 				qq
-	birthcity 		出生地
+	birthcity 		出生省份
+	birthprovince 	出生城市
 	birth 			生日
 	roomid			房屋id
 	xiaoquname: 	小区名
@@ -1364,18 +1364,22 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 【参数】  
 >  
 	
+	name				昵称
+	marry				婚恋状态 0：未设置 1：单身 2：已婚 3：恋爱 	
+	sex					性别 1 男 2 女	
 	birthyear			出生年
 	birthmonth			出生月
 	birthday			出生日	
-	marry				婚恋状态 0：未设置 1：单身 2：已婚 3：恋爱 	
-	sex					性别 1 男 2 女	
 	birthprovince		出生省份
 	birthcity			出生城市
+	qq					qq	
 	
 	隐私保护: 	
 	friend[birth]		生日隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	friend[marry]		婚恋状态隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
+	friend[sex]			性别隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	friend[birthcity]	出生地隐私 0:全用户可见 1:仅好友可见 3:仅自己可见		
+	friend[qq]			qq隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
@@ -1389,35 +1393,12 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错			
 
-	
-<h3>2.21、	</h3><h3>个人联系方式设置保存接口</h3>  
-【参数】  
->  
-	
-	qq					qq	
-	mobile				手机号
-	
-	隐私保护: 	
-	friend[qq]			qq隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	friend[mobile]		手机号隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	
-	profilesubmit 		1
-	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
-	
-【调用方式】  
-网站域名/dapi/cp.php?ac=profile&op=contact         
-【返回值】  
->  
-	
-	msgkey：			信息提示码  
-	msg：				返回的提示信息  
-	error:				返回的错误的状态, 0无错误，1出错		
-	
-<h3>2.22、	</h3><h3>个人认证信息保存接口</h3>  
+<h3>2.21、	</h3><h3>个人认证信息保存接口</h3>  
 【参数】  
 >  
 	
 	realname			实名	
+	mobile				手机号
 	idcard				身份证
 	roomid				房间号
 	profilesubmit 		1
