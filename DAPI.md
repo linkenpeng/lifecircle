@@ -1414,3 +1414,20 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错		
 	
+<h3>2.22、	</h3><h3>取消好友关注接口</h3>  
+【参数】  
+>  
+	
+	applyuid:		好友的uid
+	friendsubmit	设为1即可  
+	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+	
+【调用方式】  
+网站域名/dapi/cp.php?ac=friend&op=ignore  
+【返回值】  
+>  
+	
+	msgkey：		信息提示码
+	msg：			返回的提示信息
+	error:			返回的错误的状态, 0无错误，1出错	
+	
