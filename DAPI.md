@@ -50,6 +50,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.19、	[发表评论接口](#发表评论接口)  	
 	* 2.20、	[个人基本设置保存接口](#个人基本设置保存接口)  	
 	* 2.21、	[个人认证信息保存接口](#个人认证信息保存接口)  		
+	* 2.22、	[取消好友关注接口](#取消好友关注接口)  		
+	* 2.23、	[修改密码接口](#修改密码接口)  		
 	
  
 <h2>前言</h2>  
@@ -1430,4 +1432,23 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	msgkey：		信息提示码
 	msg：			返回的提示信息
 	error:			返回的错误的状态, 0无错误，1出错	
+	
+<h3>2.23、	</h3><h3>修改密码接口</h3>  
+【参数】  
+>
+
+	ac				account  
+	password		当前密码 
+	newpasswd1		新密码 
+	newpasswd2		确认密码  
+	pwdsubmit		提交信息的表单验证，设为1即可   
+	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+【调用方式】  
+网站域名/dapi/cp.php?ac=account 
+【返回值】  
+>  
+	
+	msgkey：			信息提示码  
+	msg：				返回的提示信息  
+	error:				返回的错误的状态, 0无错误，1出错  		
 	
