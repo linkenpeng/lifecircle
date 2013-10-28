@@ -459,6 +459,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	friendnum:    好友数
 	talknum:      吐槽数
 	verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
+	mtagnum:	  圈子数  
+	lovenum:	  收藏数  
 	
 	以下参数暂时不用管
 	namestatus: 1
@@ -1402,7 +1404,6 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	
 	realname			实名	
 	mobile				手机号
-	idcard				身份证
 	roomid				房间号
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
