@@ -26,7 +26,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．18、[赞列表接口](#赞列表接口)
 	* 1．19、[推荐好友接口](#推荐好友接口) 
 	* 1．20、[获取小区物业分布信息（期、栋、层、房号）接口](#获取小区物业分布信息（期、栋、层、房号）接口) 
-	
+	* 1．21、[便民列表接口](#便民列表接口)  	
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
 	* 2.1、	[注册获取验证码接口](#注册获取验证码接口)  
@@ -929,6 +929,27 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 			roomname	房间名称			
 			cengid		所属层
 
+<h3>1．21、	</h3><h3>便民列表接口</h3>  
+【参数】  
+>  
+
+	xiaoquid:	小区的id【默认是自己小区的id】
+	page		当前页【默认1】
+	perpage		每页数量【默认10】
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=telephone   
+【返回值】  
+>  
+	
+	data【数组】
+		phoneid：	主键id
+		title：		便民电话名称
+		image：		便民电话图标
+		phone：		便民电话号码
+		xiaoquid：	便民电话所属小区id		
+			
 		
 		
 <h2>第二部分 </h2><h2>上行接口部分</h2>
