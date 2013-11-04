@@ -325,6 +325,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 >
 
 	xiaoquid: 	小区id
+	page:		分页数【默认1】
+	perpage:	每页数【默认10】
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
@@ -770,6 +772,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	avatar:   		用户头像
 	verify_type:	认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	note:     		好友备注
+	mobile:			手机号 
+	ismember:		是否关注 1是 0否 
 	
 <h3>1．16、	</h3><h3>好友分组接口</h3>  
 【参数】  
@@ -897,7 +901,9 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		username: 	  用户名  
 		name:         用户实名  
 		verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务  
-		avatar: 	  用户头像  
+		avatar: 	  用户头像
+		mobile:		  手机号
+		ismember:	  是否关注 1是 0否
 
 <h3>1．20、	</h3><h3>获取小区物业分布信息（期、栋、层、房号）接口</h3>  
 【参数】  
