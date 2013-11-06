@@ -1432,6 +1432,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	realname			实名	
 	mobile				手机号
 	roomid				房间号
+	xiaoquid			小区id
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 	
