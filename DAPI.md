@@ -26,7 +26,9 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．18、[赞列表接口](#赞列表接口)
 	* 1．19、[推荐好友接口](#推荐好友接口) 
 	* 1．20、[获取小区物业分布信息（期、栋、层、房号）接口](#获取小区物业分布信息（期、栋、层、房号）接口) 
-	* 1．21、[便民列表接口](#便民列表接口)  	
+	* 1．21、[便民列表接口](#便民列表接口)  
+	* 1．22、[未处理消息数量接口](#未处理消息数量接口)  
+		
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
 	* 2.1、	[注册获取验证码接口](#注册获取验证码接口)  
@@ -170,6 +172,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	perpage:	每页数量【默认10】
 	uid:		用户uid【默认为登录用户的uid】
 	keyword		关键词搜索【默认为空】
+	idtype		动态类型，如blogid,talkid等【默认全部】
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
@@ -463,6 +466,17 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	mtagnum:	  圈子数  
 	lovenum:	  收藏数  
+	
+	verify_type=3时，即商家认证
+	couponslist【优惠券数组】
+		cid:		优惠券id
+		subject:	优惠券名字
+		pic:		优惠券图片
+	couponslist【产品数组】
+		goodsid:	产品id
+		subject:	产品名字
+		pic:		产品图片
+		
 	
 	以下参数暂时不用管
 	namestatus: 1
@@ -944,18 +958,43 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	perpage		每页数量【默认10】
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
+<h3>1．22、	</h3><h3>未处理消息数量接口</h3>  
+【参数】  
+>  
+	
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
 【调用方式】  
-网站域名/dapi/space.php?do=telephone   
+网站域名/dapi/space.php?do=allnotenum  
 【返回值】  
 >  
 	
-	data【数组】
-		phoneid：	主键id
-		title：		便民电话名称
-		image：		便民电话图标
-		phone：		便民电话号码
-		xiaoquid：	便民电话所属小区id		
-			
+	data
+		allnotenum		未处理消息数量
+	
+<h3>1．23、	</h3><h3>小区周边商家接口</h3>  
+【参数】  
+>  
+	xiaoquid	小区id 
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=adjacent  
+【返回值】  
+>  
+	
+	data
+		uid: 			商家id
+		realname: 		商家真实名字
+		name: 			商家昵称
+		mobile: 		商家电话
+		verify_address: 商家认证地址
+		verify_type: 	商家认证 3 
+		longitude: 		经度
+		latitude:		维度
+		note:  			备注
+		avatar:			头像
+
 		
 		
 <h2>第二部分 </h2><h2>上行接口部分</h2>
