@@ -472,10 +472,10 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		cid:		优惠券id
 		subject:	优惠券名字
 		pic:		优惠券图片
-	couponslist【产品数组】
-		goodsid:	产品id
-		subject:	产品名字
-		pic:		产品图片
+	couponslist【商品数组】
+		goodsid:	商品id
+		subject:	商品名字
+		pic:		商品图片
 		
 	
 	以下参数暂时不用管
