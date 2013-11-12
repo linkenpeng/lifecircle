@@ -747,6 +747,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	verify_type:	认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	mobile: 		手机号
 	verifystatus: 	认证状态：0 未认证；1等待审核；2通过审核	
+	verify_address:	认证地址
 	sex			 	性别
 	marry			婚姻状态
 	qq 				qq
@@ -764,6 +765,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 			birth		生日隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
 			qq			qq隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
 			marry		婚姻状态隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			mobile		手机隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
 			sex			性别隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
 	
 <h3>1．15、	</h3><h3>好友列表接口</h3>  
@@ -1444,6 +1446,9 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	birthprovince		出生省份
 	birthcity			出生城市
 	qq					qq	
+	note				个人简介
+	mobile				手机
+	verify_address		认证地址
 	
 	隐私保护: 	
 	friend[birth]		生日隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
@@ -1451,6 +1456,7 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	friend[sex]			性别隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	friend[birthcity]	出生地隐私 0:全用户可见 1:仅好友可见 3:仅自己可见		
 	friend[qq]			qq隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
+	friend[mobile]		手机隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
 	
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
