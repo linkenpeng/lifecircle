@@ -1,7 +1,7 @@
  
 **接口调用文档**
 
-Author:  [Linkenpeng](mailto:collin_linken@qq.com)
+Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 [前言](#前言)
 
@@ -28,6 +28,10 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 1．20、[获取小区物业分布信息（期、栋、层、房号）接口](#获取小区物业分布信息（期、栋、层、房号）接口) 
 	* 1．21、[便民列表接口](#便民列表接口)  
 	* 1．22、[未处理消息数量接口](#未处理消息数量接口)  
+	* 1．23、[小区周边商家接口](#小区周边商家接口)  
+	* 1．24、[查询该月份是否已经发布账单接口](#查询该月份是否已经发布账单接口)  
+	* 1．25、[查询该月份该房间是否已经发布账单接口](#查询该月份该房间是否已经发布账单接口)  
+	* 1．26、[获得房间ID接口](#获得房间ID接口)  
 		
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
@@ -53,7 +57,8 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	* 2.20、	[个人基本设置保存接口](#个人基本设置保存接口)  	
 	* 2.21、	[个人认证信息保存接口](#个人认证信息保存接口)  		
 	* 2.22、	[取消好友关注接口](#取消好友关注接口)  		
-	* 2.23、	[修改密码接口](#修改密码接口)  		
+	* 2.23、	[修改密码接口](#修改密码接口)  	
+	* 2.24、	[提交账单接口](#提交账单接口)  	
 	
  
 <h2>前言</h2>  
@@ -997,8 +1002,51 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 		note:  			备注
 		avatar:			头像
 
+<h3>1．24、	</h3><h3>查询该月份是否已经发布账单接口</h3>  
+【参数】  
+>  
+	year:		年
+	month:		月
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/dapi/cp.php?ac=fee&op=ismonth
+【返回值】  
+>  
+	data
+		set:	该月是否已经发布账单（是：1,；否：0）
+
+<h3>1．25、	</h3><h3>查询该月份该房间是否已经发布账单接口</h3>  
+【参数】  
+>  
+	year:		年
+	month:		月
+	roomid:		房间ID
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/dapi/cp.php?ac=fee&op=isfee
+【返回值】  
+>  
+	data
+		set:	该月是否已经发布账单（是：1,；否：0）
+
+<h3>1．26、	</h3><h3>获得房间ID接口</h3>  
+【参数】  
+>  
+	qiname:		期
+	dongname:	栋
+	roomname:	房间
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/dapi/cp.php?ac=fee&op=roomid
+【返回值】  
+>  
+	data
+		roomid:	房间ID	
 		
-		
+
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
 
@@ -1519,6 +1567,33 @@ Author:  [Linkenpeng](mailto:collin_linken@qq.com)
 	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 【调用方式】  
 网站域名/dapi/cp.php?ac=account 
+【返回值】  
+>  
+	
+	msgkey：			信息提示码  
+	msg：				返回的提示信息  
+	error:				返回的错误的状态, 0无错误，1出错  		
+	
+
+<h3>2.24、	</h3><h3>提交账单接口</h3>  
+【参数】  
+>
+
+	year：			年
+	month：			月
+	bill_title		账单标题（非必填）
+	bill_message	账单说明（非必填）
+	roomid			房间ID
+	owner			户主名称
+	mobile 			户主手机
+	fee_key[]
+	fee_timestart[]
+	fee_timeend[]
+	fee_money[]
+	feesubmit		提交信息的表单验证，设为1即可
+	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+【调用方式】  
+网站域名/dapi/dapi/cp.php?ac=fee&op=add
 【返回值】  
 >  
 	
