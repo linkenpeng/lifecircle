@@ -1010,7 +1010,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
-网站域名/dapi/dapi/cp.php?ac=fee&op=ismonth
+网站域名/dapi/dapi/space.php?do=fee&op=ismonth
 【返回值】  
 >  
 	data
@@ -1025,7 +1025,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
-网站域名/dapi/dapi/cp.php?ac=fee&op=isfee
+网站域名/dapi/dapi/space.php?do=fee&op=isfee
 【返回值】  
 >  
 	data
@@ -1040,7 +1040,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
-网站域名/dapi/dapi/cp.php?ac=fee&op=roomid
+网站域名/dapi/dapi/space.php?do=fee&op=roomid
 【返回值】  
 >  
 	data
