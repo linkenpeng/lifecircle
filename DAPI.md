@@ -32,6 +32,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．24、[查询该月份是否已经发布账单接口](#查询该月份是否已经发布账单接口)  
 	* 1．25、[查询该月份该房间是否已经发布账单接口](#查询该月份该房间是否已经发布账单接口)  
 	* 1．26、[获得房间ID接口](#获得房间ID接口)  
+	* 1．27、[搜索小区接口](#搜索小区接口)  
+	
 		
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
@@ -897,8 +899,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/do.php?ac=showgood&op=toplist   
 【返回值】  
 >  
-	
-	data【数组】
+	isshowgood:		  是否已经赞过（是：1，否：0）
+	showgoods【数组】
 		uid: 		  用户uid
 		username: 	  用户名
 		name:         用户实名
@@ -1045,7 +1047,35 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 >  
 	data
 		roomid:	房间ID	
-		
+
+
+<h3>1．27、	</h3><h3>搜索小区接口</h3>  
+【参数】  
+>
+
+	keyword:	关键字
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/do.php?ac=xiaoqu&op=search  
+【返回值】  
+> 
+
+	xiaoquid: 	小区id
+	xiaoquname: 小区名字
+	uid: 		发布人uid
+	username: 	发布人用户名
+	name: 		发布人名字
+	avatar: 	发布人用户名
+	introduce:  小区简介
+	pic_url: 	小区图片
+	usernum: 	小区用户数
+	locationid: 地区id
+	longitude:  小区经度
+	latitude: 	小区维度
+	citycode: 	天气网城市代码
+
+
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
 ==================
@@ -1416,7 +1446,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/cp.php?ac=mtag&op=join        
 【返回值】  
 >  
-	
+	data:
+		success:		加入圈子成功为1，否则为0
 	msgkey：			信息提示码  
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错	
@@ -1433,7 +1464,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/cp.php?ac=mtag&op=out        
 【返回值】  
 >  
-	
+	data:
+		success:		加入圈子成功为1，否则为0
 	msgkey：			信息提示码  
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错	
