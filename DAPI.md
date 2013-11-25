@@ -352,7 +352,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		topimages: 图片数组
 		close: 圈子开启状态：0 开启 1 关闭
 		grade: 允许参与的用户组	
-		
+		pic:圈子主题图片
+
 		以下参数暂时不用管
 		postnum: 0
 		uid: 1
@@ -361,7 +362,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		xiaoquid: 1	
 		threadnum: 帖子数			
 		announcement: 没公告……不知道说啥
-		pic: 
 		closeapply: 0
 		joinperm: 0
 		viewperm: 0
