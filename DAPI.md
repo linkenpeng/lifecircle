@@ -1474,7 +1474,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 【返回值】  
 >  
 	data:
-		success:		加入圈子成功为1，否则为0
+		success:		退出圈子成功为1，否则为0
 	msgkey：			信息提示码  
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错	
