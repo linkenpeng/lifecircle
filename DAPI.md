@@ -200,6 +200,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	images: 动态图片数组
 	comment: 动态的评论
 	showgood: 动态赞的人
+	isshowgood:是否已经赞过（是：1，否：0）
 	from: 发布来源，如：web/iphone/ipad/android/winphone	
 	location: 发布地址 
 	dateline: 动态产生的时间戳 
@@ -770,6 +771,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	birth 			生日
 	roomid			房屋id
 	xiaoquname: 	小区名
+	pic_url: 		小区图片
 	qiname: 		期
 	dongname: 		栋
 	cengname: 		层
@@ -1454,7 +1456,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 【返回值】  
 >  
 	data:
-		success:		加入圈子成功为1，否则为0
+		success:		1:直接加入成功；2:需要管理员审核；3:是该圈子不允许加入
 	msgkey：			信息提示码  
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错	
