@@ -198,6 +198,9 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	idtype: 帖子的id类型,如：blogid/photoid/talkid
 	classid: 分类id
 	images: 动态图片数组
+		small:缩略图，150x150
+		mid:缩放图，如果宽度大于长度，则宽度为310，高度自适应。反之亦然
+		big:原图
 	comment: 动态的评论
 	showgood: 动态赞的人
 	isshowgood:是否已经赞过（是：1，否：0）
