@@ -389,41 +389,42 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/space.php?do=mtalk&op=talklist  
 【返回值】  
 > 
-	
-	数组：
-		mtalkid: 圈子吐槽主键id
-		uid: 吐槽人uid
-		username: 吐槽人用户名
-		name: 吐槽人真实名字
-		avatar: 吐槽人头像	
-		verify_type:   0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
-		title: 标题
-		message: 内容
-		images: 图片数组
-		show_good: 赞的人数组
-		commentlist: 评论数组
-		from: 发布来源
-		location: 发布地址
-		dateline: 发表的时间戳
-		tagid: 圈子id
-		xiaoquid: 小区id	
-		
-		以下参数暂时不用管
-		classid: 0		
-		append_idtype: 
-		append_id: 0
-		append_uid: 0
-		append_text: 
-		append_title: 
-		append_image: 
-		append_link: 
-		pics: a:0:{}
-		ip: 127.0.0.1
-		replynum: 0
-		forwardnum: 0
-		goodnum: 0		
-		longitude: 0.0000000000
-		latitude: 0.0000000000
+	data:
+		pic:圈子主题图片
+		list:数组
+			mtalkid: 圈子吐槽主键id
+			uid: 吐槽人uid
+			username: 吐槽人用户名
+			name: 吐槽人真实名字
+			avatar: 吐槽人头像	
+			verify_type:   0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
+			title: 标题
+			message: 内容
+			images: 图片数组
+			show_good: 赞的人数组
+			commentlist: 评论数组
+			from: 发布来源
+			location: 发布地址
+			dateline: 发表的时间戳
+			tagid: 圈子id
+			xiaoquid: 小区id	
+			
+			以下参数暂时不用管
+			classid: 0		
+			append_idtype: 
+			append_id: 0
+			append_uid: 0
+			append_text: 
+			append_title: 
+			append_image: 
+			append_link: 
+			pics: a:0:{}
+			ip: 127.0.0.1
+			replynum: 0
+			forwardnum: 0
+			goodnum: 0		
+			longitude: 0.0000000000
+			latitude: 0.0000000000
 		
 <h3>1．9、	</h3><h3>评论列表接口</h3>  
 【参数】  
