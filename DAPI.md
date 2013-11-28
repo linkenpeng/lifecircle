@@ -408,6 +408,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 			dateline: 发表的时间戳
 			tagid: 圈子id
 			xiaoquid: 小区id	
+			isshowgood:		  是否已经赞过（是：1，否：0）
 			
 			以下参数暂时不用管
 			classid: 0		
@@ -1087,6 +1088,20 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	longitude:  小区经度
 	latitude: 	小区维度
 	citycode: 	天气网城市代码
+
+
+<h3>1．28、	</h3><h3>未读通知数接口</h3>  
+【参数】  
+>  
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=notice&op=count  
+【返回值】  
+>  
+	
+	data
+		new: 			未读通知数	
 
 
 
