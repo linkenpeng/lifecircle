@@ -1664,6 +1664,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错  		
 	
+
 <h3>2.25、	</h3><h3>注册时，更新小区id接口</h3>  
 【参数】  
 >
