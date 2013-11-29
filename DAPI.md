@@ -62,6 +62,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 2.22、	[取消好友关注接口](#取消好友关注接口)  		
 	* 2.23、	[修改密码接口](#修改密码接口)  	
 	* 2.24、	[提交账单接口](#提交账单接口)  	
+	* 2.25、	[注册时，更新小区id接口](#注册时，更新小区id接口)  
 	
  
 <h2>前言</h2>  
@@ -1662,3 +1663,20 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	msg：				返回的提示信息  
 	error:				返回的错误的状态, 0无错误，1出错  		
 	
+<h3>2.24、	</h3><h3>注册时，更新小区id接口</h3>  
+【参数】  
+>
+
+	xiaoquid:	选中小区的xiaoquid
+	uid:		注册后，返回的uid
+	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+【调用方式】  
+网站域名/dapi/do.php?ac=register&op=updateid
+【返回值】  
+>  
+	
+	msgkey：		信息提示码
+	msg：			返回的提示信息
+	error:			返回的错误的状态, 0无错误，1出错
+	data:
+		success:	成功：1
