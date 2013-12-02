@@ -1353,7 +1353,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 >  
 
 	applyuid:		对方的uid；批量申请时，多个uid用|连接，如：1|2|3 
-	gid:			申请的分组
 	note:			申请时的附带信息
 	addsubmit：		提交申请表单用的验证，设为1即可  
 	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
