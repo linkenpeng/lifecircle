@@ -62,7 +62,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 2.22、	[取消好友关注接口](#取消好友关注接口)  		
 	* 2.23、	[修改密码接口](#修改密码接口)  	
 	* 2.24、	[提交账单接口](#提交账单接口)  	
-	* 2.25、	[注册时，更新小区id接口](#注册时，更新小区id接口)  
+	* 2.25、	[注册时更新小区id接口](#注册时更新小区id接口)  
 	
  
 <h2>前言</h2>  
@@ -256,6 +256,9 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	from: 发布来源，如：iphone/android/ipad/web
 	tag: 标签	
 	images: 图片【数组】
+		big:
+		mid:
+		small:
 	location: 发布地址
 	dateline: 发布时间戳	
 	
@@ -1665,7 +1668,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	error:				返回的错误的状态, 0无错误，1出错  		
 	
 
-<h3>2.25、	</h3><h3>注册时，更新小区id接口</h3>  
+<h3>2.25、	</h3><h3>注册时更新小区id接口</h3>  
 【参数】  
 >
 
@@ -1681,4 +1684,4 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	msg：			返回的提示信息
 	error:			返回的错误的状态, 0无错误，1出错
 	data:
-		success:	成功：1
+		success:	成功：1  		
