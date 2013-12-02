@@ -1519,6 +1519,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	picids		图片ids, 多个用|连接, 调用 <2.14 上传照片接口> 得到 
 	
 	转发时需要提供：
+	message			转发时填的内容
 	forward_id		原吐槽id 
 	forward_idtype	吐槽的idtype，值为：mtalkid 
 	
