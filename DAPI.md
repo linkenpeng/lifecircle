@@ -63,6 +63,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 2.23、	[修改密码接口](#修改密码接口)  	
 	* 2.24、	[提交账单接口](#提交账单接口)  	
 	* 2.25、	[注册时更新小区id接口](#注册时更新小区id接口)  
+	* 2.26、	[设置主题图片](#设置主题图片)  
 	
  
 <h2>前言</h2>  
@@ -489,6 +490,9 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	verify_type:  认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	mtagnum:	  圈子数  
 	lovenum:	  收藏数  
+	themepic:	 
+			original:	原图
+			adapt:		主题图缩略图
 	privacy：隐私【数组】
 			birthcity	家乡隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
 			birth		生日隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
@@ -1449,7 +1453,10 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/cp.php?ac=upload&op=uploadphoto    
 【返回值】  
 >  
-	
+	data:
+		picid:			图片id
+		thumbpath：		缩略图地址
+		picurl：		图片地址
 	msgkey：			信息提示码
 	msg：				返回的提示信息
 	error:				返回的错误的状态, 0无错误，1出错	
@@ -1691,3 +1698,19 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	error:			返回的错误的状态, 0无错误，1出错
 	data:
 		success:	成功：1  		
+
+<h3>2.26、	</h3><h3>设置主题图片接口</h3>  
+【参数】  
+>  
+	
+	picid		图片ids, 多个用|连接, 调用 <2.14 上传照片接口> 得到
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/cp.php?ac=profile&op=theme   
+【返回值】  
+>  
+	
+	msgkey：			信息提示码
+	msg：				返回的提示信息
+	error:				返回的错误的状态, 0无错误，1出错	
