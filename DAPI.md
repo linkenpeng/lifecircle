@@ -820,7 +820,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	verify_type:	认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	note:     		好友备注
 	mobile:			手机号 
-	isfriend:		是否已经关注 1是 0否 
+	ismember:		是否已经关注 1是 0否 
 	
 <h3>1．16、	</h3><h3>好友分组接口</h3>  
 【参数】  
