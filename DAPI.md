@@ -483,7 +483,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	realname: 	  用户实名
 	mobile:   	  手机号
 	idcard:   	  身份证
-	verifystatus: 认证状态：0 未认证；1等待审核；2通过审核	
+	verifystatus: 认证状态：0 未认证；1等待审核；2通过审核；-1审核不通过
 	avatar: 	  头像
 	friendnum:    好友数
 	talknum:      吐槽数
