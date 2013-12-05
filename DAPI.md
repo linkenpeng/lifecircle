@@ -995,6 +995,16 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	perpage		每页数量【默认10】
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
+【调用方式】  
+网站域名/dapi/space.php?do=telephone  
+【返回值】  
+>  
+	
+	data
+		title 		电话名称
+		image 		图片
+		phone		电话号码
+
 <h3>1．22、	</h3><h3>未处理消息数量接口</h3>  
 【参数】  
 >  
