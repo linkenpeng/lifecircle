@@ -34,6 +34,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．26、[获得房间ID接口](#获得房间ID接口)  
 	* 1．27、[搜索小区接口](#搜索小区接口)  
 	* 1．28、[未读通知数接口](#未读通知数接口)  
+	* 1．29、[一个圈子信息的接口](#一个圈子信息的接口)  
 	
 		
 	
@@ -1127,6 +1128,45 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	data
 		new: 			未读通知数	
 
+<h3>1.29、<h3>一个圈子信息的接口</h3>  
+【参数】  
+>
+
+	xiaoquid: 	小区id
+	tagid:		圈子id
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=mtag&op=info  
+【返回值】  
+> 
+	
+		tagid: 圈子id
+		tagname: 圈子名
+		membernum: 成员数		
+		talknum: 圈子吐槽数
+		topimages: 图片数组
+		close: 圈子开启状态：0 开启 1 关闭
+		grade: 允许参与的用户组	
+		pic:圈子主题图片
+		ismember:是否已经加入
+
+		以下参数暂时不用管
+		postnum: 0
+		uid: 1
+		username: admin		
+		fieldid: 1
+		xiaoquid: 1	
+		threadnum: 帖子数			
+		announcement: 没公告……不知道说啥
+		closeapply: 0
+		joinperm: 0
+		viewperm: 0
+		threadperm: 0
+		postperm: 0
+		recommend: 0
+		moderator: 	
+		title: 其他	
 
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
