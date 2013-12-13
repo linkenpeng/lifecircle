@@ -247,6 +247,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 > 
 
 	talkid: 吐槽id【主键】
+	id:和talkid一样
 	uid: 发表吐槽人uid
 	username: 吐槽人用户名
 	name: 吐槽人真实名字
@@ -311,6 +312,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 > 
 
 	mtalkid: 圈子吐槽主键id
+	id:和mtalkid一样
 	uid: 吐槽人uid
 	username: 吐槽人用户名
 	name: 吐槽人真实名字
@@ -409,6 +411,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		pic:圈子主题图片
 		list:数组
 			mtalkid: 圈子吐槽主键id
+			id:和mtalkid一样
 			uid: 吐槽人uid
 			username: 吐槽人用户名
 			name: 吐槽人真实名字
