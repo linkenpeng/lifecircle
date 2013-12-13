@@ -196,7 +196,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	name: 用户实名
 	avatar: 用户头像
 	verify_type:   0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
-	titile: 动态标题
+	title: 动态标题
+	titile: 和title一样，这是错误的拼写，以后会除去
 	content: 动态内容
 	id: 帖子的id
 	idtype: 帖子的id类型,如：blogid/photoid/talkid
@@ -420,6 +421,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 			tagid: 圈子id
 			xiaoquid: 小区id	
 			isshowgood:		  是否已经赞过（是：1，否：0）
+			isShowgood:		  和isshowgood一样，这是错误拼写，以后会除去。
 			
 			以下参数暂时不用管
 			classid: 0		
@@ -495,12 +497,12 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 			original:	原图
 			adapt:		主题图缩略图
 	privacy：隐私【数组】
-			birthcity	家乡隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			birth		生日隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			qq			qq隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			marry		婚姻状态隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			mobile		手机隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			sex			性别隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			birthcity	家乡隐私 0：全用户可见 3: 仅自己可见
+			birth		生日隐私 0：全用户可见 3: 仅自己可见
+			qq			qq隐私 0：全用户可见 3: 仅自己可见
+			marry		婚姻状态隐私 0：全用户可见 3: 仅自己可见
+			mobile		手机隐私 0：全用户可见 3: 仅自己可见
+			sex			性别隐私 0：全用户可见 3: 仅自己可见
 	
 	verify_type=3时，即商家认证
 	couponslist【优惠券数组】
@@ -797,12 +799,12 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	cengname: 		层
 	roomname: 		室
 	privacy：隐私【数组】
-			birthcity	家乡隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			birth		生日隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			qq			qq隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			marry		婚姻状态隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			mobile		手机隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
-			sex			性别隐私 0：全用户可见 1: 仅好友可见 3: 仅自己可见
+			birthcity	家乡隐私 0：全用户可见 3: 仅自己可见
+			birth		生日隐私 0：全用户可见 3: 仅自己可见
+			qq			qq隐私 0：全用户可见 3: 仅自己可见
+			marry		婚姻状态隐私 0：全用户可见 3: 仅自己可见
+			mobile		手机隐私 0：全用户可见 3: 仅自己可见
+			sex			性别隐私 0：全用户可见 3: 仅自己可见
 	
 <h3>1．15、	</h3><h3>好友列表接口</h3>  
 【参数】  
@@ -1408,7 +1410,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 	applyuid:		对方的uid；批量申请时，多个uid用|连接，如：1|2|3 
 	note:			申请时的附带信息
-	addsubmit：		提交申请表单用的验证，设为1即可  
+	addsubmit:		提交申请表单用的验证，设为1即可  
 	m_auth:			API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 	
 【调用方式】  
@@ -1628,12 +1630,12 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	verify_address		认证地址
 	
 	隐私保护: 	
-	friend[birth]		生日隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	friend[marry]		婚恋状态隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	friend[sex]			性别隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	friend[birthcity]	出生地隐私 0:全用户可见 1:仅好友可见 3:仅自己可见		
-	friend[qq]			qq隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
-	friend[mobile]		手机隐私 0:全用户可见 1:仅好友可见 3:仅自己可见
+	friend[birth]		生日隐私 0:全用户可见 3:仅自己可见
+	friend[marry]		婚恋状态隐私 0:全用户可见 3:仅自己可见
+	friend[sex]			性别隐私 0:全用户可见 3:仅自己可见
+	friend[birthcity]	出生地隐私 0:全用户可见 3:仅自己可见		
+	friend[qq]			qq隐私 0:全用户可见 3:仅自己可见
+	friend[mobile]		手机隐私 0:全用户可见 3:仅自己可见
 	
 	profilesubmit 		1
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
