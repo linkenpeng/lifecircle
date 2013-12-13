@@ -938,6 +938,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 【返回值】  
 >  
 	isshowgood:		  是否已经赞过（是：1，否：0）
+	isShowGood: 	  和isshowgood一样，是错误拼写。以后会去除
 	showgoods【数组】
 		uid: 		  用户uid
 		username: 	  用户名
