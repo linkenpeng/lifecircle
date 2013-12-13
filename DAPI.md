@@ -417,8 +417,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 			title: 标题
 			message: 内容
 			images: 图片数组
-			show_good: 赞的人数组
-			commentlist: 评论数组
+			showgood: 赞的人数组
+			comment: 评论数组
 			from: 发布来源
 			location: 发布地址
 			dateline: 发表的时间戳
