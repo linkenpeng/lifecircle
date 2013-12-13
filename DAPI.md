@@ -264,8 +264,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		small:
 	location: 发布地址
 	dateline: 发布时间戳	
-	show_good: 赞的人数组
-	commentlist: 评论数组
+	showgood: 赞的人数组
+	comment: 评论数组
 	
 	以下参数暂时不用管
 	longitude: 0.0000000000
@@ -322,8 +322,10 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	title: 标题
 	message: 内容
 	images: 图片数组
-	show_good: 赞的人数组
-	commentlist: 评论数组
+	showgood: 赞的人数组
+	show_good: 与showgood一样，为错误拼写，以后除去
+	comment: 评论数组
+	commentlist: 与comment一样，为错误拼写，以后除去
 	from: 发布来源
 	location: 发布地址
 	dateline: 发表的时间戳
