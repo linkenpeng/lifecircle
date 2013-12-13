@@ -264,6 +264,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		small:
 	location: 发布地址
 	dateline: 发布时间戳	
+	show_good: 赞的人数组
+	commentlist: 评论数组
 	
 	以下参数暂时不用管
 	longitude: 0.0000000000
