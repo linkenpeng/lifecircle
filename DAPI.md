@@ -31,7 +31,9 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．23、[小区周边商家接口](#小区周边商家接口)  
 	* 1．24、[查询该月份是否已经发布账单接口](#查询该月份是否已经发布账单接口)  
 	* 1．25、[查询该月份该房间是否已经发布账单接口](#查询该月份该房间是否已经发布账单接口)  
-	* 1．26、[获得房间ID接口](#获得房间ID接口)  
+	* 1．26.01、[获得房间ID接口](#获得房间ID接口)  
+	* 1．26.02、[通过地址获得房间ID接口](#通过地址获得房间ID接口)  
+	* 1．26.03、[获得所有房间ID接口](#获得所有房间ID接口)  
 	* 1．27、[搜索小区接口](#搜索小区接口)  
 	* 1．28、[未读通知数接口](#未读通知数接口)  
 	* 1．29、[一个圈子信息的接口](#一个圈子信息的接口)  
@@ -817,7 +819,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 【参数】  
 >  
 
-	group:  分组id
+	group:  分组id 0：全部邻居，1：商家，2：公共服务，3：好友
 	page:	当前页【默认1】
 	perpage:每页数量【默认10】
 	m_auth:	API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
@@ -1082,7 +1084,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	data
 		set:	该月是否已经发布账单（是：1,；否：0）
 
-<h3>1．26、	</h3><h3>获得房间ID接口</h3>  
+<h3>1．26.01、	</h3><h3>获得房间ID接口</h3>  
 【参数】  
 >  
 	qiname:		期
@@ -1096,6 +1098,35 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 >  
 	data
 		roomid:	房间ID	
+
+
+<h3>1．26.02、	</h3><h3>通过地址获得房间ID接口</h3>  
+【参数】  
+>  
+	address:		地址
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/dapi/space.php?do=fee&op=getroomid  
+【返回值】  
+>  
+	data
+		roomid:	房间ID	
+
+
+<h3>1．26.03、	</h3><h3>获得所有房间ID接口</h3>  
+【参数】  
+>  
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/dapi/space.php?do=fee&op=allroomids  
+【返回值】  
+>  
+	data
+		roomids:	
+			i:房间id
+			a:地址
 
 
 <h3>1．27、	</h3><h3>搜索小区接口</h3>  
@@ -1381,7 +1412,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 >  
 	
 	Filedata:			文件上传变量
-	avatarsubmit：		提交表单用的验证，设为1即可  
+	avatarsubmit:		提交表单用的验证，设为1即可  
 	m_auth:				API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 	
 【调用方式】  
@@ -1423,10 +1454,10 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	
 【调用方式】  
 申请成为好友接口：
-网站域名/dapi/dapi/cp.php?ac=friend&op=add  
+网站域名/dapi/cp.php?ac=friend&op=add  
 
 批量申请成为好友接口：
-网站域名/dapi/dapi/cp.php?ac=friendmul&op=add  
+网站域名/dapi/cp.php?ac=friendmul&op=add  
 
 【返回值】  
 >  
