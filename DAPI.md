@@ -217,6 +217,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	location: 发布地址 
 	dateline: 动态产生的时间戳 
 	xiaoquid: 小区id
+	share_url:		分享到微信的连接
 	
 	以下参数暂时不用管 
 	longitude: 发布经度
@@ -433,7 +434,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 			xiaoquid: 小区id	
 			isshowgood:		  是否已经赞过（是：1，否：0）
 			isShowgood:		  和isshowgood一样，这是错误拼写，以后会除去。
-			
+			share_url:		分享到微信的连接
+
 			以下参数暂时不用管
 			classid: 0		
 			append_idtype: 
