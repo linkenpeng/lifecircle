@@ -37,6 +37,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．27、[搜索小区接口](#搜索小区接口)  
 	* 1．28、[未读通知数接口](#未读通知数接口)  
 	* 1．29、[一个圈子信息的接口](#一个圈子信息的接口)  
+	* 1．30、[获取可发布商品的小区](#获取可发布商品的小区)  
 	
 		
 	
@@ -69,6 +70,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 2.24、	[提交账单接口](#提交账单接口)  	
 	* 2.25、	[注册时更新小区id接口](#注册时更新小区id接口)  
 	* 2.26、	[设置主题图片接口](#设置主题图片接口)  
+	* 2.27、	[发布商品接口](#发布商品接口)  
 	
  
 <h2>前言</h2>  
@@ -194,7 +196,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 网站域名/dapi/space.php?do=home  
 【返回值】  
 > 
-
+data:数组
 	uid: 用户id
 	username: 用户名
 	name: 用户实名
@@ -210,6 +212,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		small:缩略图，150x150
 		mid:缩放图，如果宽度大于长度，则宽度为310，高度自适应。反之亦然
 		big:原图
+		width:图片宽度
+		height:图片高度
 	comment: 动态的评论
 	showgood: 动态赞的人
 	isshowgood:是否已经赞过（是：1，否：0）
@@ -218,6 +222,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	dateline: 动态产生的时间戳 
 	xiaoquid: 小区id
 	share_url:		分享到微信的连接
+other:数组
+	pic_url :小区主题图片
 	
 	以下参数暂时不用管 
 	longitude: 发布经度
@@ -1010,7 +1016,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	xiaoquid:	小区的id【默认是自己小区的id】
 	page		当前页【默认1】
 	perpage		每页数量【默认10】
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+	m_auth:		可选。API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/space.php?do=telephone  
@@ -1212,6 +1218,29 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 		recommend: 0
 		moderator: 	
 		title: 其他	
+
+
+<h3>1.30、<h3>获取可发布商品的小区</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=goods&op=xiaoqulist  
+【返回值】  
+> 
+	
+		data:
+			list:
+				location:数组
+					locationid:			地区id
+                    name: 				地区名称
+                xiaoqu:
+                	xiaoquid:			小区id
+                    name: 				小区名称
+
+
 
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
@@ -1844,6 +1873,32 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 【调用方式】  
 网站域名/dapi/cp.php?ac=profile&op=theme   
+【返回值】  
+>  
+	
+	msgkey：			信息提示码
+	msg：				返回的提示信息
+	error:				返回的错误的状态, 0无错误，1出错	
+
+
+<h3>2.27、	</h3><h3>发布商品接口</h3>  
+【参数】  
+>  
+	goodssubmit:	设置为1
+	xiaoquids[]:	需要发布的小区列表（可发布小区列表由接口1.30获取）
+	locationid[]:	需要发布的地区列表（可发布小区列表由接口1.30获取）
+	subject：		标题
+	message:		内容
+	oldprice:		原价
+	curprice:		优惠价
+	payment：		支付方式（0：货到付款，1：在线付款）
+	password：		微信端使用，用于直接微信上查看购买者
+	friend：		0：全部小区可见；1：粉丝可见；5：本小区可见；6：指定小区可见；7：指定地区可见
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名dapi/cp.php?ac=goods&op=edit   
 【返回值】  
 >  
 	
