@@ -128,7 +128,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 <h2>第一部分</h2> <h2>下行接口部分</h2>
 
-1.1、<h3>获得周边小区接口</h3>  
+1.1.01、<h3>获得周边小区接口</h3>  
 【参数】  
 >
 
@@ -140,6 +140,32 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 【调用方式】  
 网站域名/dapi/do.php?ac=xiaoqu&op=getlist
+【返回值】  
+> 
+
+	xiaoquid: 	小区id
+	xiaoquname: 小区名字
+	uid: 		发布人uid
+	username: 	发布人用户名
+	name: 		发布人名字
+	avatar: 	发布人用户名
+	introduce:  小区简介
+	pic_url: 	小区图片
+	usernum: 	小区用户数
+	locationid: 地区id
+	longitude:  小区经度
+	latitude: 	小区维度
+	citycode: 	天气网城市代码
+
+1.1.02、<h3>获得推荐小区接口</h3>  
+【参数】  
+>
+
+	keyword:	小区名称
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/do.php?ac=xiaoqu&op=getrecommendlist
 【返回值】  
 > 
 
