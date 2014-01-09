@@ -248,9 +248,16 @@ data:数组
 	xiaoquid: 小区id
 	share_url:		分享到微信的连接
 	feedtype:0：系统类型、1：吐槽原帖、2：转发吐槽（和附件样式一样）、3：附件（例如二手商品）、4：转发附件（例如转发二手商品）
+	append_idtype: 
+	append_id: 附件id
+	append_text: 
+	append_title: 
+	append_link: 
+	append_image: 附件图片
+	append_image_width:附件图片宽度
+	append_image_height:附件图片高度
 
-other:数组
-	pic_url :小区主题图片
+
 	
 	以下参数暂时不用管 
 	longitude: 发布经度
@@ -259,19 +266,17 @@ other:数组
 	friend: 0
 	target_ids: 
 	body_general: 
-	append_idtype: 
-	append_id: 0
-	append_text: 
-	append_title: 
-	append_link: 
-	append_image: 
 	replynum: 0
 	forwardnum: 0
 	goodnum: 0	
 	hot: 0
 	istop: 0	
 	tag: 
-	
+
+	other:数组
+	pic_url :小区主题图片
+
+
 1.4、<h3>吐槽详情接口</h3>  
 【参数】  
 >
@@ -301,6 +306,8 @@ other:数组
 		big:
 		mid:
 		small:
+		width:
+		height:
 	location: 发布地址
 	dateline: 发布时间戳	
 	showgood: 赞的人数组
