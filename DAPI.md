@@ -475,17 +475,20 @@ data:数组
 			isshowgood:		  是否已经赞过（是：1，否：0）
 			isShowgood:		  和isshowgood一样，这是错误拼写，以后会除去。
 			share_url:		分享到微信的连接
+			append_idtype: 附件类型
+			append_id: 附件id
+			append_uid: 
+			append_text: 
+			append_title: 
+			append_image: 附件图片
+			append_image_width:附件图片宽度
+			append_image_height:附件图片高度 
+			append_link: 
+			append_mtalkid: 
+
 
 			以下参数暂时不用管
 			classid: 0		
-			append_idtype: 
-			append_id: 0
-			append_uid: 0
-			append_text: 
-			append_title: 
-			append_image: 
-			append_link: 
-			append_mtalkid: 
 			pics: a:0:{}
 			ip: 127.0.0.1
 			replynum: 0
