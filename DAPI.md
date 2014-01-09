@@ -6,7 +6,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 [前言](#前言)
 
 * 第一部分 [下行接口部分](#下行接口部分)
-	* 1．1、	[获得周边小区接口](#获得周边小区接口)
+	* 1．1.01、	[获得周边小区接口](#获得周边小区接口)
+	* 1．1.02、	[获得推荐小区接口](#获得推荐小区接口)
 	* 1．2、	[广告接口](#广告接口)
 	* 1．3、	[动态列表接口](#动态列表接口)
 	* 1．4、	[吐槽详情接口](#吐槽详情接口)
@@ -136,7 +137,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	longitude:  小区经度
 	latitude:   小区维度
 	span:		经纬度范围【默认0.01】
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/do.php?ac=xiaoqu&op=getlist
@@ -162,7 +162,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 >
 
 	keyword:	小区名称
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/do.php?ac=xiaoqu&op=getrecommendlist
