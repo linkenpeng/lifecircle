@@ -38,7 +38,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．27、[搜索小区接口](#搜索小区接口)  
 	* 1．28、[未读通知数接口](#未读通知数接口)  
 	* 1．29、[一个圈子信息的接口](#一个圈子信息的接口)  
-	* 1．30、[获取可发布商品的小区](#获取可发布商品的小区)  
 	
 		
 	
@@ -1257,27 +1256,6 @@ data:数组
 		title: 其他	
 
 
-<h3>1.30、<h3>获取可发布商品的小区</h3>  
-【参数】  
->
-
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
-
-【调用方式】  
-网站域名/dapi/space.php?do=goods&op=xiaoqulist  
-【返回值】  
-> 
-	
-		data:
-			list:
-				location:数组
-					locationid:			地区id
-                    name: 				地区名称
-                xiaoqu:
-                	xiaoquid:			小区id
-                    name: 				小区名称
-
-
 
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
@@ -1922,8 +1900,6 @@ data:数组
 【参数】  
 >  
 	goodssubmit:	设置为1
-	xiaoquids[]:	需要发布的小区列表（可发布小区列表由接口1.30获取）
-	locationid[]:	需要发布的地区列表（可发布小区列表由接口1.30获取）
 	subject：		标题
 	message:		内容
 	oldprice:		原价
