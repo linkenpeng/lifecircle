@@ -138,7 +138,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	span:		经纬度范围【默认0.01】
 
 【调用方式】  
-网站域名/dapi/do.php?ac=xiaoqu&op=getlist
+网站域名/dapi/do.php?ac=xiaoqu&op=getlist  
 【返回值】  
 > 
 
@@ -163,7 +163,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	keyword:	小区名称
 
 【调用方式】  
-网站域名/dapi/do.php?ac=xiaoqu&op=getrecommendlist
+网站域名/dapi/do.php?ac=xiaoqu&op=getrecommendlist  
 【返回值】  
 > 
 
@@ -190,7 +190,7 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
-网站域名/dapi/space.php?do=ad
+网站域名/dapi/space.php?do=ad  
 【返回值】  
 > 
 
