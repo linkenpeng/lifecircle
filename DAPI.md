@@ -379,7 +379,8 @@ data:数组
 		"big"
 		"mid"
 		"small"
-	
+		"height"
+		"width"
 	以下参数暂时不用管
 	append_type: none
 	append_author: 
@@ -464,6 +465,11 @@ data:数组
 			title: 标题
 			message: 内容
 			images: 图片数组
+				big
+				mid
+				small
+				width
+				height
 			showgood: 赞的人数组
 			comment: 评论数组
 			from: 发布来源
