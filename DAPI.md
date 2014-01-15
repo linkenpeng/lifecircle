@@ -38,7 +38,13 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 1．27、[搜索小区接口](#搜索小区接口)  
 	* 1．28、[未读通知数接口](#未读通知数接口)  
 	* 1．29、[一个圈子信息的接口](#一个圈子信息的接口)  
-	
+	* 1．30.01、[我申请的优惠劵](#我申请的优惠劵)  
+	* 1．30.02、[我发表的优惠劵](#我发表的优惠劵)  
+	* 1．30.03、[全部优惠劵](#全部优惠劵)  
+	* 1．31、[我参与的活动](#我参与的活动)  
+	* 1．32.01、[获取服务人员](#获取服务人员)  
+	* 1．32.02、[获取服务列表](#获取服务列表)  
+	* 1．32.03、[获取我的预约服务列表](#获取我的预约服务列表)  
 		
 	
 * 第二部分 [上行接口部分](#上行接口部分)  
@@ -1261,7 +1267,223 @@ data:数组
 		moderator: 	
 		title: 其他	
 
+<h3>1．30.01、<h3>我申请的优惠劵</h3>  
+【参数】  
+>
 
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=coupons&view=apply  
+【返回值】  
+> 
+	
+		couponid: 优惠劵
+		subject: 标题
+		validity: 到期日期（时间戳）
+		pic: 图片
+		message: 描述
+		num: 数量
+		renum: 剩余数量
+		uid: 发布者uid
+		dateline: 发布时间（时间戳）,
+		viewnum: 查看数,
+		replynum: 回复数,
+		apply_dateline: 报名日期（时间戳）,
+		pic_thumb: image/appico/coupons.png,
+		biz_uid: 发布者uid,
+		biz_xiaoquid: 发布者小区id,
+		biz_realname: 发布者真实姓名,
+		biz_mobile: 发布者电话,
+		biz_name: 发布者昵称,
+		biz_avatar_small: 发布者头像（小），
+		biz_avatar_middle: 发布者头像（中），
+		biz_avatar_big: 发布者头像（大），
+		comment: 评论（数组）
+		showgood: 赞（数组）
+
+<h3>1．30.02、<h3>我发表的优惠劵</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=coupons&view=my  
+【返回值】  
+> 
+	
+		couponid: 优惠劵
+		subject: 标题
+		validity: 到期日期（时间戳）
+		pic: 图片
+		message: 描述
+		num: 数量
+		renum: 剩余数量
+		uid: 发布者uid
+		dateline: 发布时间（时间戳）,
+		viewnum: 查看数,
+		replynum: 回复数,
+		apply_dateline: 报名日期（时间戳）,
+		pic_thumb: image/appico/coupons.png,
+		biz_uid: 发布者uid,
+		biz_xiaoquid: 发布者小区id,
+		biz_realname: 发布者真实姓名,
+		biz_mobile: 发布者电话,
+		biz_name: 发布者昵称,
+		biz_avatar_small: 发布者头像（小），
+		biz_avatar_middle: 发布者头像（中），
+		biz_avatar_big: 发布者头像（大），
+		comment: 评论（数组）
+		showgood: 赞（数组）
+
+<h3>1．30.03、<h3>全部优惠劵</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=coupons&view=all  
+【返回值】  
+> 
+	
+		couponid: 优惠劵
+		subject: 标题
+		validity: 到期日期（时间戳）
+		pic: 图片
+		message: 描述
+		num: 数量
+		renum: 剩余数量
+		uid: 发布者uid
+		dateline: 发布时间（时间戳）,
+		viewnum: 查看数,
+		replynum: 回复数,
+		apply_dateline: 报名日期（时间戳）,
+		pic_thumb: image/appico/coupons.png,
+		biz_uid: 发布者uid,
+		biz_xiaoquid: 发布者小区id,
+		biz_realname: 发布者真实姓名,
+		biz_mobile: 发布者电话,
+		biz_name: 发布者昵称,
+		biz_avatar_small: 发布者头像（小），
+		biz_avatar_middle: 发布者头像（中），
+		biz_avatar_big: 发布者头像（大），
+		comment: 评论（数组）
+		showgood: 赞（数组）
+
+<h3>1．30.03、<h3>我参与的活动</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=event&view=me&type=all  
+【返回值】  
+> 
+	list:数组
+		eventid: 活动id
+		uid: 1,
+		xiaoquid: 1,
+		username: admin,
+		dateline: 发布时间
+		title: 标题
+		location: 活动举行地点,
+		deadline: 截止报名时间,
+		starttime: 开始时间,
+		endtime: 结束时间,
+		realname: 发布者真实姓名
+		mobile: 发布者联系电话
+		name: 发布者昵称
+		avatar_small: 发布者头像（小）
+		avatar_middle: 发布者头像（中）
+		avatar_big: 发布者头像（大）
+		comment: 评论数组
+		showgood: 赞数组
+		classid: 4,
+		phone: null,
+		province: ,
+		city: ,
+		poster: ,
+		thumb: 0,
+		remote: 0,
+		membernum: 2,
+		follownum: 0,
+		viewnum: 3,
+		grade: 1,
+		recommendtime: 0,
+		tagid: 0,
+		picnum: 0,
+		threadnum: 0,
+		updatetime: 1389693792,
+		hot: 0,
+		pic: image/appico/event.png,
+		verify_type: 4,
+
+<h3>1．32.01、<h3>获取服务人员</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=serviceuser  
+【返回值】  
+> 
+	list:数组
+		uid: 服务人员uid,
+		name: 服务人员姓名
+		phone: 服务人员联系电话
+		xiaoquid: 服务人员所属小区
+		classname: 服务人员类型
+		avatar: 服务人员头像
+
+<h3>1．32.02、<h3>获取服务列表</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=serviceitem  
+【返回值】  
+> 
+	list:数组
+		itemid: 服务id
+		subject:服务标题 
+		message: 服务描述
+		price: 价格
+		dateline: 发布时间
+		score: 服务得分
+		pic: 图片
+		name: 服务人员姓名
+		phone: 服务人员联系方式
+		image: 服务类型图片,
+		classname: 服务人员类型,
+		comment: 评论列表,
+		showgood: 赞列表
+
+<h3>1．32.03、<h3>获取我的预约服务列表</h3>  
+【参数】  
+>
+
+	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
+
+【调用方式】  
+网站域名/dapi/space.php?do=serviceapply&view=me  
+【返回值】  
+> 
+	list:数组
+		itemid: 服务id
+		subject:服务标题 
+		message: 服务描述
+		price: 价格
+		dateline: 发布时间
+		score: 服务得分
+		pic: 图片
+		name: 服务人员姓名
+		phone: 服务人员联系方式
 
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
