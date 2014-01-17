@@ -2128,13 +2128,12 @@ data:数组
 【参数】  
 >  
 	goodssubmit:	设置为1
-	subject：		标题
+	subject:		标题
 	message:		内容
 	oldprice:		原价
 	curprice:		优惠价
-	payment：		支付方式（0：货到付款，1：在线付款）
-	password：		微信端使用，用于直接微信上查看购买者
-	friend：		0：全部小区可见；1：粉丝可见；5：本小区可见；6：指定小区可见；7：指定地区可见
+	payment:		支付方式（0：货到付款，1：在线付款）
+	password:		微信端使用，用于直接微信上查看购买者
 
 	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
