@@ -193,7 +193,6 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 
 	xiaoquid:	小区id
 	pagetype:	页面位置
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/space.php?do=ad  
@@ -1064,7 +1063,6 @@ data:数组
 	xiaoquid:	小区的id【默认是自己小区的id】
 	page		当前页【默认1】
 	perpage		每页数量【默认10】
-	m_auth:		可选。API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/space.php?do=telephone  
@@ -1192,7 +1190,6 @@ data:数组
 >
 
 	keyword:	关键字
-	m_auth:		API密钥, 由登录后返回的，客户端需要存储,每次调用接口需要使用此参数发到服务器  
 
 【调用方式】  
 网站域名/dapi/do.php?ac=xiaoqu&op=search  
