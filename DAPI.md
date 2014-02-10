@@ -579,7 +579,7 @@ data:数组
 		goodsid:	商品id
 		subject:	商品名字
 		pic:		商品图片
-		
+	plid:	私信对话id
 	
 	以下参数暂时不用管
 	namestatus: 1
