@@ -1200,7 +1200,7 @@ data:数组
 	data
 		roomids:	
 			i:房间id
-			a:地址
+			a:地址(fulladdress)
 
 
 <h3>1．27、	</h3><h3>搜索小区接口</h3>  
