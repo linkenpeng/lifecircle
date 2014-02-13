@@ -748,6 +748,9 @@ data:数组
 	isnew: 					是否是新的对话，1：是 0：不是
 	pmnum: 					对话详情内容数量
 	touid: 					对话对方的uid	
+	toname:					对方昵称
+	toavatar:				对方头像
+    toverify_type			对方认证类型
 	
 	以下参数暂时不用管
 	uid: 1		
