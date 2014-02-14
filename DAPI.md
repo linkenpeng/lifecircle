@@ -829,6 +829,7 @@ data:数组
 	authorverify_type:认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	isfriend: 		产生通知的人是否是自己的好友 1 ：是		
 	note: 			评论内容
+	noteurl:		评论内容里面的连接
 	dateline: 		通知时间戳
 	idtype: 		帖子的类型，如：blogid
 	sid: 			帖子的id
