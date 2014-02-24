@@ -78,6 +78,8 @@ Author:  [ChanYu Leung](mailto:269226841@qq.com)
 	* 2.25、	[注册时更新小区id接口](#注册时更新小区id接口)  
 	* 2.26、	[设置主题图片接口](#设置主题图片接口)  
 	* 2.27、	[发布商品接口](#发布商品接口)  
+	* 2.28、	[更新推送token接口](#更新推送token接口)  
+	* 2.28.01、	[测试推送接口](#测试推送接口)  
 	
  
 <h2>前言</h2>  
@@ -2163,3 +2165,32 @@ data:数组
 	msgkey：			信息提示码
 	msg：				返回的提示信息
 	error:				返回的错误的状态, 0无错误，1出错	
+
+<h3>2.28、	</h3><h3>更新推送token接口</h3>  
+【参数】  
+>  
+	uid:	用户uid，如果未登录可不上传uid。登录后需要再次调用此接口，设置uid。
+	token:	token值
+	device:	设备名称，andorid或ios
+
+【调用方式】  
+网站域名/dapi/space.php?do=push&op=add   
+【返回值】  
+>  
+	
+	msgkey：			信息提示码
+	msg：				返回的提示信息
+	error:				返回的错误的状态, 0无错误，1出错	
+
+<h3>2.28.01、	</h3><h3>测试推送接口</h3>  
+【参数】  
+>  
+	touid:		接收者的uid
+	message:	发送的内容
+	m_auth:		发送者的m_auth
+
+【调用方式】  
+网站域名/dapi/space.php?do=push&op=try   
+【返回值】  
+>  
+	暂无
