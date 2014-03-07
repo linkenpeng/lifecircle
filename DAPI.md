@@ -832,7 +832,24 @@ data:数组
 	authoravatar: 	产生通知人的头像
 	authorverify_type:认证类型：0、没认证；1、人肉认证；2、住户认证；3、商家认证；4、公共服务
 	isfriend: 		产生通知的人是否是自己的好友 1 ：是		
-	note: 			评论内容
+	note: 			评论内容:
+			            'piccomment',//照片评论
+			            'blogcomment',//生活资讯
+			            'talkcomment',// 吐槽评论
+			            'mtag_talk_comment',// 圈子吐槽评论
+			            'eventcomment',// 活动评论
+			            'goodscomment',// 商品评论
+			            'couponscomment',// 优惠劵评论
+			            'secondhandcomment',// 二手评论
+			            'jingwucomment',// 警务评论
+			            'articlecomment',// 文章评论
+			            'friend',// 加为好友
+			            'forward',// 转发
+			            'verify',// 认证信息
+			            'atme',// 评论中被@
+			            'pollinvite',//邀请投票
+			            'poll',//投票
+			            'service'//物业服务
 	noteurl:		评论内容里面的连接
 	dateline: 		通知时间戳
 	idtype: 		帖子的类型，如：blogid
