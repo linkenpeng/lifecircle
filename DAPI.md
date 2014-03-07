@@ -300,6 +300,7 @@ data:数组
 
 	talkid: 吐槽id【主键】
 	id:和talkid一样
+	idtype:talkid
 	uid: 发表吐槽人uid
 	username: 吐槽人用户名
 	name: 吐槽人真实名字
