@@ -1320,10 +1320,11 @@ data:数组
 > 
 	
 		couponid: 优惠劵
-		subject: 标题
+		subject: 附件标题
 		validity: 到期日期（时间戳）
 		pic: 图片
-		message: 描述
+		message: 附件描述
+		content: 描述
 		num: 数量
 		renum: 剩余数量
 		uid: 发布者uid
@@ -1431,6 +1432,7 @@ data:数组
 		username: admin,
 		dateline: 发布时间
 		title: 标题
+		content:描述
 		location: 活动举行地点,
 		deadline: 截止报名时间,
 		starttime: 开始时间,
