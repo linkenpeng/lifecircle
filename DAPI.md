@@ -1343,6 +1343,8 @@ data:数组
 		biz_avatar_big: 发布者头像（大），
 		comment: 评论（数组）
 		showgood: 赞（数组）
+		append_link:网页连接
+		content:描述
 
 <h3>1．30.02、<h3>我发表的优惠劵</h3>  
 【参数】  
@@ -1445,25 +1447,8 @@ data:数组
 		avatar_big: 发布者头像（大）
 		comment: 评论数组
 		showgood: 赞数组
-		classid: 4,
-		phone: null,
-		province: ,
-		city: ,
-		poster: ,
-		thumb: 0,
-		remote: 0,
-		membernum: 2,
-		follownum: 0,
-		viewnum: 3,
-		grade: 1,
-		recommendtime: 0,
-		tagid: 0,
-		picnum: 0,
-		threadnum: 0,
-		updatetime: 1389693792,
-		hot: 0,
-		pic: image/appico/event.png,
-		verify_type: 4,
+		append_link:网页连接
+		content:描述
 
 <h3>1．32.01、<h3>获取服务人员</h3>  
 【参数】  
@@ -1530,6 +1515,8 @@ data:数组
 		name: 服务人员姓名
 		phone: 服务人员联系方式
 		status:1：申请中、2：已受理、3：已完成
+		append_link:网页连接
+		content:描述
 
 
 <h2>第二部分 </h2><h2>上行接口部分</h2>
